@@ -1,6 +1,8 @@
 {
   "name": "mirai",
+  "description": "My Single Page Application Playground.",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
