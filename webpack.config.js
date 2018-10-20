@@ -20,7 +20,7 @@ module.exports = {
   entry: {
     main: './src/index.ts'
   },
-  devtool: "inline-source-map",
+  devtool: "cheap-module-eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
