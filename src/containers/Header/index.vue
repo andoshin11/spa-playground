@@ -7,16 +7,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { APIClient } from '@/infra/network/APIClient'
-import {
-  GetPopularMoviesRequest,
-  GetPopularMovies
-} from '@/infra/network/api/Movie'
+import store from '@/store'
 
 import Presenter, { IPresenter } from './presenter'
 
 // Use Case
 import DestroyContainerUseCase from './DestroyContainerUseCase'
+import FetchPopularMoviesUseCase from '@/usecases/movies/FetchPopularMoviesUseCase'
+
+// Repositories
+import MovieRepository from '@/repositories/MovieRepository'
+
+// Service
+import ErrorService from '@/services/ErrorService'
 
 // components
 
@@ -28,9 +31,12 @@ export default Vue.extend({
   },
   methods: {
     async loadContainer() {
-      const response = await APIClient.shared.request(new GetPopularMovies({}))
-      console.log('response')
-      console.log(response)
+      const usecase = new FetchPopularMoviesUseCase({
+        movieRepository: new MovieRepository(store),
+        errorService: new ErrorService({ context: 'Fetching popular movies' })
+      })
+
+      await usecase.execute()
     }
   },
   async mounted() {
