@@ -11,7 +11,8 @@
     "dev": "webpack-dev-server",
     "stats": "webpack --profile --json > bundleStats.json",
     "analyzer": "yarn stats && yarn webpack-bundle-analyzer ./bundleStats.json",
-    "g:global": "HYGEN_TMPLS=$HOME/dev/hygen-template/_templates hygen"
+    "g:global": "HYGEN_TMPLS=$HOME/dev/hygen-template/_templates hygen",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "husky": {
     "hooks": {
@@ -25,9 +26,12 @@
     ]
   },
   "devDependencies": {
-    "@storybook/vue": "^3.4.11",
+    "@storybook/vue": "^4.0.0-alpha.25",
     "@types/node": "^10.12.0",
+    "@types/storybook__vue": "^3.3.1",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-vue": "^2.0.2",
     "css-loader": "^1.0.0",
     "dotenv-webpack": "^1.5.7",
     "html-webpack-plugin": "^3.2.0",

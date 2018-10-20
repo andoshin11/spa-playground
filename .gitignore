@@ -3,3 +3,4 @@ node_modules
 dist
 bundleStats.json
 .env
+*.log
