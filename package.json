@@ -5,7 +5,8 @@
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
