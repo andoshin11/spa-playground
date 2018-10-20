@@ -7,6 +7,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { APIClient } from '@/infra/network/APIClient'
+import {
+  GetPopularMoviesRequest,
+  GetPopularMovies
+} from '@/infra/network/api/Movie'
 
 import Presenter, { IPresenter } from './presenter'
 
@@ -22,7 +27,11 @@ export default Vue.extend({
     return {}
   },
   methods: {
-    async loadContainer() {}
+    async loadContainer() {
+      const response = await APIClient.shared.request(new GetPopularMovies({}))
+      console.log('response')
+      console.log(response)
+    }
   },
   async mounted() {
     await this.loadContainer()
