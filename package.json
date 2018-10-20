@@ -17,7 +17,10 @@
     }
   },
   "lint-staged": {
-    "*.{vue,ts,js}": ["prettier --write", "git add"]
+    "*.{vue,ts,js}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
@@ -36,6 +39,7 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "vuex": "^3.0.1"
   }
 }
