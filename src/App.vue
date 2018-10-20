@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     Vue Rendered!
+    <router-view />
   </div>
 </template>
 

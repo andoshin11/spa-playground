@@ -4,6 +4,16 @@
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
   },
   "include": [
     "src/**/*.ts",
