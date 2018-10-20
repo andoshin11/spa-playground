@@ -2,6 +2,11 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es5",
-    "module": "es2015"
-  }
+    "module": "esnext",
+    "moduleResolution": "node",
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue"
+  ]
 }
