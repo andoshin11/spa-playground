@@ -8,7 +8,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   mounted() {
-    console.log("page mounted")
+    console.log('page mounted')
   }
 })
 </script>
