@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const Dotenv = require('dotenv-webpack')
 
 // Constants
 const MODE = process.env.NODE_ENV || 'development'
@@ -12,7 +13,8 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: './public/index.html'
   }),
-  new VueLoaderPlugin()
+  new VueLoaderPlugin(),
+  new Dotenv()
 ]
 
 module.exports = {
