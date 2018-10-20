@@ -7,19 +7,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import store from '@/store'
 
 import Presenter, { IPresenter } from './presenter'
-
-// Use Case
-import DestroyContainerUseCase from './DestroyContainerUseCase'
-import FetchPopularMoviesUseCase from '@/usecases/movies/FetchPopularMoviesUseCase'
-
-// Repositories
-import MovieRepository from '@/repositories/MovieRepository'
-
-// Service
-import ErrorService from '@/services/ErrorService'
 
 // components
 
@@ -30,14 +19,7 @@ export default Vue.extend({
     return {}
   },
   methods: {
-    async loadContainer() {
-      const usecase = new FetchPopularMoviesUseCase({
-        movieRepository: new MovieRepository(store),
-        errorService: new ErrorService({ context: 'Fetching popular movies' })
-      })
-
-      await usecase.execute()
-    }
+    async loadContainer() {}
   },
   async mounted() {
     await this.loadContainer()
