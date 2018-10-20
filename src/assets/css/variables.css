@@ -5,12 +5,19 @@
   --color-blue: #004f99;
   --color-gray: #999;
   --color-light-gray: #eee;
+  --color-purple: #5148dc;
 
   /* Space */
   --space-base: 8px;
   --space-lv1: var(--space-base);
   --space-lv2: calc(var(--space-base) * 2);
   --space-lv4: calc(var(--space-base) * 4);
+
+  /* Size */
+  --size-base: 8px;
+  --size-lv4: calc(var(--size-base) * 4);
+  --size-lv6: calc(var(--size-base) * 6);
+  --size-lv8: calc(var(--size-base) * 8);
 
   /* Font */
   --fontSize-subText: 12px;
