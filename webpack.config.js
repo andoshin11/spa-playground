@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     main: './src/main.ts'
   },
+  devtool: "inline-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js"
@@ -19,7 +20,8 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: "ts-loader"
+        use: "ts-loader",
+        exclude: /node_modules/
       }
     ]
   },

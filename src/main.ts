@@ -1,5 +1,8 @@
-type Hello = "hello"
+import { uppercase } from './utils'
 
-const greeting = (word: Hello) => console.log(`greeting: ${word}.`)
+type Hello = "hello" | "sup"
+
+const greeting = (word: Hello) => console.log(`greeting: ${uppercase(word)}.`)
 
 greeting('hello')
+greeting("sup")
