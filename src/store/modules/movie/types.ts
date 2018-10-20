@@ -1,21 +1,12 @@
 import { IMovieProps } from '@/entities/Movie'
 
 export enum Types {
-  STORE_ITEMS = 'movie/store_items',
-  RESET_ITEMS = 'movie/reset_items',
   STORE_ITEM = 'movie/store_item',
   RESET_ITEM = 'movie/reset_item',
-  REMOVE_ITEM = 'movie/remove_item'
-}
-
-export class StoreItems implements FluxStandardAction {
-  type = Types.STORE_ITEMS
-  constructor(public payload: IMovieProps[]) {}
-}
-
-export class ResetItems implements FluxStandardAction {
-  type = Types.RESET_ITEMS
-  payload = null
+  REMOVE_ITEM = 'movie/remove_item',
+  STORE_MOVIES = 'movie/store_movies',
+  RESET_MOVIES = 'movie/reset_movies',
+  STORE_POPULAR_MOVIES = 'movie/store_popular_movies'
 }
 
 export class StoreItem implements FluxStandardAction {
@@ -26,4 +17,19 @@ export class StoreItem implements FluxStandardAction {
 export class ResetItem implements FluxStandardAction {
   type = Types.RESET_ITEM
   payload = null
+}
+
+export class StoreMovies implements FluxStandardAction {
+  type = Types.STORE_MOVIES
+  constructor(public payload: IMovieProps[]) {}
+}
+
+export class ResetMovies implements FluxStandardAction {
+  type = Types.RESET_MOVIES
+  payload = null
+}
+
+export class StorePopularMovies implements FluxStandardAction {
+  type = Types.STORE_POPULAR_MOVIES
+  constructor(public payload: number[]) {}
 }

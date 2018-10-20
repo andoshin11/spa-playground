@@ -1,15 +1,29 @@
 import { MutationTree } from 'vuex'
 import { IMovieState, initialState } from '@/store/modules/movie/state'
-import { Types, StoreItems, StoreItem } from '@/store/modules/movie/types'
+import {
+  Types,
+  StoreMovies,
+  StorePopularMovies,
+  StoreItem
+} from '@/store/modules/movie/types'
 
 export const mutations: MutationTree<IMovieState> = {
-  [Types.STORE_ITEMS]: (state, action: StoreItems) => {
-    const items = action.payload
-    state.items = items
+  [Types.STORE_MOVIES]: (state, action: StoreMovies) => {
+    const movies = action.payload
+    movies.forEach(movie => {
+      state.byIds = {
+        ...state.byIds,
+        [movie.id]: movie
+      }
+    })
   },
-  [Types.RESET_ITEMS]: state => {
-    const { items } = initialState()
-    state.items = items
+  [Types.RESET_MOVIES]: state => {
+    const { byIds } = initialState()
+    state.byIds = byIds
+  },
+  [Types.STORE_POPULAR_MOVIES]: (state, action: StorePopularMovies) => {
+    const popularMovies = action.payload
+    state.popularMovies = popularMovies
   },
   [Types.STORE_ITEM]: (state, action: StoreItem) => {
     const item = action.payload

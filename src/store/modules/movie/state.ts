@@ -1,11 +1,15 @@
 import { IMovieProps } from '@/entities/Movie'
 
 export interface IMovieState {
-  items: IMovieProps[]
   item: IMovieProps | null
+  byIds: {
+    [id: number]: IMovieProps
+  }
+  popularMovies: number[]
 }
 
 export const initialState = (): IMovieState => ({
-  items: [],
-  item: null
+  item: null,
+  byIds: {},
+  popularMovies: []
 })
