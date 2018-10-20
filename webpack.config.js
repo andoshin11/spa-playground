@@ -1,10 +1,17 @@
 const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 // Constants
 const MODE = process.env.NODE_ENV || "development"
 const DEV = MODE === "development"
 
 const SRC = path.join(__dirname, "src")
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: "./public/index.html"
+  })
+]
 
 module.exports = {
   mode: MODE,
@@ -25,6 +32,7 @@ module.exports = {
       }
     ]
   },
+  plugins,
   resolve: {
     extensions: [".ts", ".js", ".vue"]
   }
