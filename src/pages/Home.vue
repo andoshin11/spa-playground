@@ -1,14 +1,16 @@
 <template>
   <div class="Home">
-    <div class="Home__Title">Home page</div>
+    <HomeContainer />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import HomeContainer from '@/containers/Home/index.vue'
+
 export default Vue.extend({
-  mounted() {
-    console.log('page mounted')
+  components: {
+    HomeContainer
   }
 })
 </script>
