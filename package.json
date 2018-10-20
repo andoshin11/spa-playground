@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "g:global": "HYGEN_TMPLS=$HOME/dev/hygen-template/_templates hygen"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
