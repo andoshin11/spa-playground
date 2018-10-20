@@ -15,7 +15,7 @@ export enum HTTPMethod {
 export class APIClient implements NetworkClient {
   static shared = new APIClient()
 
-  baseURL: string = 'http://localhost:4000'
+  baseURL: string = 'https://api.themoviedb.org/3'
   timeout: number = 15 * 1000
 
   request<U extends APIResponse>(request: APIRequest<U>): Promise<U> {
@@ -26,9 +26,9 @@ export class APIClient implements NetworkClient {
         .request({
           url: request.path,
           method: request.method,
-          params: isRead && request.params,
+          params: isRead && this.applyAPIKey(request.params),
           data: !isRead && request.params,
-          withCredentials: true,
+          withCredentials: false,
           timeout: this.timeout,
           baseURL: request.baseURL || this.baseURL,
           headers: this.createHeaders()
@@ -44,6 +44,14 @@ export class APIClient implements NetworkClient {
           reject(apiError)
         })
     })
+  }
+
+  // Add API Key to the params
+  private applyAPIKey(params: any): any {
+    return {
+      ...params,
+      api_key: process.env.MOVIEDB_API_KEY
+    }
   }
 
   // Default parser
