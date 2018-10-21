@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = (baseConfig, env, config) => {
   config.module.rules.push({
     test: /\.ts$/,
@@ -12,5 +14,6 @@ module.exports = (baseConfig, env, config) => {
     exclude: /node_modules/
   })
   config.resolve.extensions.push('.ts')
+  config.resolve.alias['@'] = path.join(__dirname, '../src')
   return config
 }
