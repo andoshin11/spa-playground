@@ -15,6 +15,7 @@
 
   /* Size */
   --size-base: 8px;
+  --size-lv2: calc(var(--size-base) * 2);
   --size-lv4: calc(var(--size-base) * 4);
   --size-lv6: calc(var(--size-base) * 6);
   --size-lv8: calc(var(--size-base) * 8);
