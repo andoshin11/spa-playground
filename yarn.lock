@@ -743,6 +743,20 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@storybook/addon-a11y@^4.0.0-alpha.25":
+  version "4.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-4.0.0-rc.1.tgz#3148caf5a7d55aedbf63865790b363b08c0a0159"
+  integrity sha512-dqNcmIc0UCm2MpdCsin3M2Z9XK6iKvD87yRPq8JRzoK06bttMsP53EuIzF6KzyhEbjbx/JkyAgQdE5BFY5E9iw==
+  dependencies:
+    "@emotion/styled" "^0.10.6"
+    "@storybook/addons" "4.0.0-rc.1"
+    "@storybook/client-logger" "4.0.0-rc.1"
+    "@storybook/components" "4.0.0-rc.1"
+    "@storybook/core-events" "4.0.0-rc.1"
+    axe-core "^3.1.2"
+    global "^4.3.2"
+    prop-types "^15.6.2"
+
 "@storybook/addons@4.0.0-rc.1":
   version "4.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.0-rc.1.tgz#c4dd29c0c0aa08e0755d73a37201873b777537e4"
@@ -953,6 +967,11 @@
   version "10.12.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
   integrity sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
+
+"@types/storybook__addon-a11y@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-a11y/-/storybook__addon-a11y-3.3.1.tgz#7b22a8d6636aba9e4f0e158aea410ed4f8090716"
+  integrity sha512-pmRviAq4uXuE9wIGuiG7fHsS82KN+CVHG670SsSwefc2Sbvi3G3rNov+KRd0/A2ppAgO40SRiecZ6UK3kgrhsA==
 
 "@types/storybook__vue@^3.3.1":
   version "3.3.1"
@@ -1467,6 +1486,11 @@ autoprefixer@^9.0.0, autoprefixer@^9.2.1:
     num2fraction "^1.2.2"
     postcss "^7.0.5"
     postcss-value-parser "^3.3.1"
+
+axe-core@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.1.2.tgz#ca0aff897ebefca7552f97859dc1217c06c4f9e6"
+  integrity sha512-e1WVs0SQu3tM29J9a/mISGvlo2kdCStE+yffIAJF6eb42FS+eUFEVz9j4rgDeV2TAfPJmuOZdRetWYycIbK7Vg==
 
 axios@^0.18.0:
   version "0.18.0"
