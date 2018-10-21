@@ -1,5 +1,8 @@
 <template>
   <div class="Home">
+    <div class="Home__Popular">
+      <PosterList title="Popular Movies" :movies="presenter.popularMovies" />
+    </div>
   </div>
 </template>
 
@@ -19,10 +22,14 @@ import MovieRepository from '@/repositories/MovieRepository'
 import ErrorService from '@/services/ErrorService'
 
 // components
+import PosterList from '@/components/Modules/Movies/PosterList'
 
 interface IData {}
 
 export default Vue.extend({
+  components: {
+    PosterList
+  },
   data(): IData {
     return {}
   },
