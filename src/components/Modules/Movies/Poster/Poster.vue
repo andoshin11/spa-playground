@@ -1,6 +1,6 @@
 <template>
   <div class="Poster" ref="root" :style="posterStyle">
-    <img :src="posterPath" alt="" class="Poster__Image">
+    <img :src="posterPath" :alt="movie.props.title" class="Poster__Image">
   </div>
 </template>
 
