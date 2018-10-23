@@ -17,6 +17,7 @@ storiesOf('components/Base/Button', module)
         <div class="StorybookSection__Label">Small</div>
         <Button text="test" size="small" />
       </div>
+    </div>
   </div>
 `
   }))
@@ -34,6 +35,7 @@ storiesOf('components/Base/Button', module)
         <div class="StorybookSection__Label">Small</div>
         <Button text="test" size="small" disabled />
       </div>
+    </div>
   </div>
 `
   }))
