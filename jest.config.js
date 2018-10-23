@@ -2,13 +2,13 @@ module.exports = {
   moduleFileExtensions: ['vue', 'js', 'ts', 'json'],
   moduleDirectories: ['node_modules'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
-    '^.+\\.vue$': 'jest-vue-preprocessor',
+    '^.+\\.js$': 'ts-jest',
+    '^.+\\.vue$': '<rootDir>/node_modules/vue-jest',
     '^.+\\.ts$': 'ts-jest'
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '[^/]vue$': 'vue/dist/vue.common.js',
+    '[^/]vue$': 'vue/dist/vue.esm.js',
     '^@storybook/(.*)$': '<rootDir>/node_modules/@storybook/$1'
   },
   snapshotSerializers: ['jest-serializer-vue'],
@@ -20,5 +20,10 @@ module.exports = {
   transformIgnorePatterns: [
     './node_modules/(?!vue)',
     './node_modules/@storybook'
-  ]
+  ],
+  globals: {
+    'ts-jest': {
+      babelConfig: '.babelrc'
+    }
+  }
 }
