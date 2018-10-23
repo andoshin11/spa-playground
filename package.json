@@ -9,6 +9,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "snapshot": "jest",
+    "snapshot:update": "jest --updateSnapshot",
     "stats": "webpack --profile --json > bundleStats.json",
     "analyzer": "yarn stats && yarn webpack-bundle-analyzer ./bundleStats.json",
     "g:global": "HYGEN_TMPLS=$HOME/dev/hygen-template/_templates hygen",
