@@ -10,8 +10,8 @@ export default class ErrorService implements BaseService {
   }
 
   async handle(error: any) {
-    console.log(`error called in ${this.context}`)
-    console.log(error)
+    console.log(`error called in ${this.context}`) // eslint-disable-line
+    console.log(error) // eslint-disable-line
     return
   }
 }
