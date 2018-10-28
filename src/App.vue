@@ -1,5 +1,8 @@
 <template>
-  <div id="app" class="App">
+  <div 
+    id="app" 
+    class="App"
+  >
     <div class="App__Header">
       <HeaderContainer />
     </div>

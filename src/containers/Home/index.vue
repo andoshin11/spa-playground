@@ -1,7 +1,10 @@
 <template>
   <div class="Home">
     <div class="Home__Popular">
-      <PosterList title="Popular Movies" :movies="presenter.popularMovies" />
+      <PosterList 
+        title="Popular Movies" 
+        :movies="presenter.popularMovies"
+      />
     </div>
   </div>
 </template>
@@ -40,6 +43,9 @@ export default Vue.extend({
       })
     }
   },
+  async mounted() {
+    await this.loadContainer()
+  },
   methods: {
     async loadContainer() {
       const usecase = new FetchPopularMoviesUseCase({
@@ -49,9 +55,6 @@ export default Vue.extend({
 
       await usecase.execute()
     }
-  },
-  async mounted() {
-    await this.loadContainer()
   }
 })
 </script>
