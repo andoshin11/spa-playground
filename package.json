@@ -22,7 +22,9 @@
     "lint:ts": "eslint -c .eslintrc.typescript.js --ext .ts .",
     "lintfix:ts": "yarn run lint:ts --fix",
     "lint:vue": "eslint -c .eslintrc.vue.js --ext .vue .",
-    "lintfix:vue": "yarn run lint:vue --fix"
+    "lintfix:vue": "yarn run lint:vue --fix",
+    "lint:css": "stylelint '**/*.vue'",
+    "lintfix:css": "yarn run lint:css --fix"
   },
   "husky": {
     "hooks": {
@@ -31,6 +33,7 @@
   },
   "lint-staged": {
     "*.vue": [
+      "stylelint --fix",
       "eslint -c .eslintrc.vue.js --fix",
       "prettier --write",
       "git add"
