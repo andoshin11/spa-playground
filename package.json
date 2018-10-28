@@ -15,6 +15,8 @@
     "analyzer": "yarn stats && yarn webpack-bundle-analyzer ./bundleStats.json",
     "g:global": "HYGEN_TMPLS=$HOME/dev/hygen-template/_templates hygen",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./src/assets",
+    "lint": "npm-run-all lint:*",
+    "lintfix": "npm-run-all lintfix:*",
     "lint:js": "eslint --ext .js .",
     "lintfix:js": "yarn run lint:js --fix",
     "lint:ts": "eslint -c .eslintrc.typescript.js --ext .ts .",
@@ -26,12 +28,17 @@
     }
   },
   "lint-staged": {
-    "*.{vue,ts}": [
+    "*.vue": [
       "prettier --write",
       "git add"
     ],
     "*.js": [
       "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "eslint -c .eslintrc.typescript.js --fix",
       "prettier --write",
       "git add"
     ]
