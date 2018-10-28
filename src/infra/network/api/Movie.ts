@@ -3,7 +3,7 @@ import { APIRequest } from '@/infra/network/APIRequest'
 import { HTTPMethod } from '@/infra/network/APIClient'
 import { IMovieProps } from '@/entities/Movie'
 
-export interface PaginationResponse<T> {
+export interface IPaginationResponse<T> {
   page: number
   total_results: number
   total_pages: number
@@ -17,7 +17,7 @@ export class GetPopularMovies implements APIRequest<IMovieProps[]> {
   path = '/movie/popular'
   method = HTTPMethod.GET
   parse = (data: AxiosResponse) => {
-    const axiosResponse = data.data as PaginationResponse<IMovieProps[]>
+    const axiosResponse = data.data as IPaginationResponse<IMovieProps[]>
     return axiosResponse.results
   }
   constructor(public params: GetPopularMoviesRequest) {}

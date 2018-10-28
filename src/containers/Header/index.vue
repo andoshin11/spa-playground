@@ -8,8 +8,6 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import Presenter, { IPresenter } from './presenter'
-
 // components
 
 interface IData {}
@@ -23,10 +21,6 @@ export default Vue.extend({
   },
   async mounted() {
     await this.loadContainer()
-  },
-  async destroyed() {
-    // const usecase = new DestroyContainerUseCase({})
-    // await usecase.execute()
   }
 })
 </script>
