@@ -5,9 +5,6 @@ const Dotenv = require('dotenv-webpack')
 
 // Constants
 const MODE = process.env.NODE_ENV || 'development'
-const DEV = MODE === 'development'
-
-const SRC = path.join(__dirname, 'src')
 
 const plugins = [
   new HtmlWebpackPlugin({
