@@ -1,7 +1,16 @@
 <template>
-  <button :class="[typeClassName, sizeClassName, { '-autoWidth': autoWidth }]" :type="nativeType" :disabled="disabled" class="Button" @click="handleClick" >
+  <button 
+    :class="[typeClassName, sizeClassName, { '-autoWidth': autoWidth }]" 
+    :type="nativeType" 
+    :disabled="disabled" 
+    class="Button" 
+    @click="handleClick"
+  >
     <div class="Button__Text">{{ text }}</div>
-    <i v-if="loading" class="Button__Icon el-icon-loading" />
+    <i 
+      v-if="loading" 
+      class="Button__Icon el-icon-loading"
+    />
   </button>
 </template>
 

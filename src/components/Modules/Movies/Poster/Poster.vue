@@ -1,6 +1,14 @@
 <template>
-  <div class="Poster" ref="root" :style="posterStyle">
-    <img :src="posterPath" :alt="movie.props.title" class="Poster__Image">
+  <div 
+    ref="root" 
+    class="Poster" 
+    :style="posterStyle"
+  >
+    <img 
+      :src="posterPath" 
+      :alt="movie.props.title" 
+      class="Poster__Image"
+    >
   </div>
 </template>
 
@@ -13,15 +21,15 @@ interface IData {
 }
 
 export default Vue.extend({
-  data(): IData {
-    return {
-      clientWidth: 0
-    }
-  },
   props: {
     movie: {
       type: Object as () => MovieEntity,
       required: true
+    }
+  },
+  data(): IData {
+    return {
+      clientWidth: 0
     }
   },
   computed: {

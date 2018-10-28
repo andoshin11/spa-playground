@@ -3,13 +3,28 @@
     <div class="PosterList__Header">
       <div class="PosterList__Title">{{ title }}</div>
       <div class="PosterList__Nav">
-        <Pager :currentPage="currentPage" :size="1" :total="movies.length" @change="changePage" />  
+        <Pager 
+          :current-page="currentPage" 
+          :size="1" 
+          :total="movies.length" 
+          @change="changePage"
+        />  
       </div>  
     </div>
     <div class="PosterList__Body">
-      <div v-if="movies" class="PosterList__Slider">
-        <div class="PosterList__SliderInner" :style="slideInnterStyle">
-          <div v-for="(movie, index) in movies" class="PosterList__SliderItem" :key="index">
+      <div 
+        v-if="movies" 
+        class="PosterList__Slider"
+      >
+        <div 
+          class="PosterList__SliderInner" 
+          :style="slideInnterStyle"
+        >
+          <div 
+            v-for="(movie, index) in movies" 
+            :key="index" 
+            class="PosterList__SliderItem"
+          >
             <Poster :movie="movie" />
           </div>
         </div>

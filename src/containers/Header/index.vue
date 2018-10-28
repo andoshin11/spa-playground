@@ -16,11 +16,11 @@ export default Vue.extend({
   data(): IData {
     return {}
   },
-  methods: {
-    async loadContainer() {}
-  },
   async mounted() {
     await this.loadContainer()
+  },
+  methods: {
+    async loadContainer() {}
   }
 })
 </script>
