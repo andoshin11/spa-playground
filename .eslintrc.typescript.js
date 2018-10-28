@@ -7,8 +7,10 @@ const overrideConfig = {
   plugins: ['typescript'],
   rules: {
     'no-undef': 'off',
-    'typescript/interface-name-prefix': ['error', 'always'],
-    'typescript/explicit-member-accessibility': 'off'
+    'typescript/interface-name-prefix': 'warn',
+    'typescript/explicit-member-accessibility': 'off',
+    'typescript/member-ordering': 'off',
+    'typescript/no-parameter-properties': 'off'
   }
 }
 
