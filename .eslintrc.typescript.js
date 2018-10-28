@@ -2,16 +2,21 @@ const baseConfig = require('./.eslintrc.js')
 
 const overrideConfig = {
   ...baseConfig,
-  extends: ['eslint:recommended', 'typescript'],
-  parser: 'typescript-eslint-parser',
-  plugins: ['typescript'],
+  extends: [...baseConfig.extends, 'eslint:recommended', 'typescript'],
+  parserOptions: {
+    ...baseConfig.parserOptions,
+    parser: 'typescript-eslint-parser'
+  },
+  plugins: [...baseConfig.plugins, 'typescript'],
   rules: {
+    ...baseConfig.rules,
     'no-undef': 'off',
     'typescript/interface-name-prefix': 'warn',
     'typescript/explicit-member-accessibility': 'off',
     'typescript/member-ordering': 'off',
     'typescript/no-parameter-properties': 'off',
-    'typescript/member-delimiter-style': 'off'
+    'typescript/member-delimiter-style': 'off',
+    'typescript/interface-name-prefix': 'off'
   }
 }
 

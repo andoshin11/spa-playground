@@ -4,11 +4,12 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended'],
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module'
   },
+  plugins: [],
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
