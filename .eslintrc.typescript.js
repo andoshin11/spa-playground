@@ -10,7 +10,8 @@ const overrideConfig = {
     'typescript/interface-name-prefix': 'warn',
     'typescript/explicit-member-accessibility': 'off',
     'typescript/member-ordering': 'off',
-    'typescript/no-parameter-properties': 'off'
+    'typescript/no-parameter-properties': 'off',
+    'typescript/member-delimiter-style': 'off'
   }
 }
 
