@@ -4,3 +4,4 @@ dist
 bundleStats.json
 .env
 *.log
+coverage

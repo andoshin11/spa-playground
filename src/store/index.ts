@@ -10,8 +10,14 @@ export interface RootState {
   movie: movie.IMovieState
 }
 
-export default new Vuex.Store<RootState>({
+const Store = new Vuex.Store<RootState>({
   modules: {
     movie: movie.store
   }
 })
+
+export default Store
+
+export const StoreFactory = (): typeof Store => {
+  return new Vuex.Store<RootState>({})
+}

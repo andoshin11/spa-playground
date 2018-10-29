@@ -1,4 +1,4 @@
-import Store from '@/store'
+import Store, { StoreFactory } from '@/store'
 import {
   StoreItem,
   ResetItem,
@@ -56,4 +56,8 @@ export default class MovieRepository {
 
     return movies
   }
+}
+
+export const MovieRepositoryFactory = (): MovieRepository => {
+  return new MovieRepository(StoreFactory())
 }

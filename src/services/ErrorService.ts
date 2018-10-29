@@ -15,3 +15,9 @@ export default class ErrorService implements BaseService {
     return
   }
 }
+
+export const ErrorServiceFactory = (): ErrorService => {
+  return new ErrorService({
+    context: 'Dummy Error Service context.'
+  })
+}
