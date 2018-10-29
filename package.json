@@ -25,6 +25,7 @@
     "lintfix:vue": "yarn run lint:vue --fix",
     "lint:css": "stylelint '**/*.vue'",
     "lintfix:css": "yarn run lint:css --fix",
+    "test": "npm-run-all test:*",
     "test:unit": "jest --config=jest.config.unit.js"
   },
   "husky": {
