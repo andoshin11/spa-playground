@@ -26,7 +26,8 @@
     "lint:css": "stylelint '**/*.vue'",
     "lintfix:css": "yarn run lint:css --fix",
     "test": "npm-run-all test:*",
-    "test:unit": "jest --config=jest.config.unit.js"
+    "test:unit": "jest --config=jest.config.unit.js",
+    "codecov": "codecov"
   },
   "husky": {
     "hooks": {
@@ -68,6 +69,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
+    "codecov": "^3.1.0",
     "css-loader": "^1.0.0",
     "dotenv-webpack": "^1.5.7",
     "eslint": "^5.8.0",

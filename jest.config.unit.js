@@ -11,7 +11,7 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: ['src/usecases/**/*.ts'],
-  coverageDirectory: '<rootDir>/test/unit/coverage',
+  coverageDirectory: '<rootDir>/coverage/',
   coverageReporters: ['html', 'text-summary'],
   verbose: true,
   testMatch: ['<rootDir>/test/unit/**/*.ts'],
