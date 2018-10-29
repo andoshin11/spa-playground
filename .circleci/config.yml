@@ -20,6 +20,10 @@ jobs:
           name: Lint
           command: yarn run lint
 
+      - run:
+          name: Test
+          command: yarn run test
+
       - save_cache:
           paths:
             - node_modules
