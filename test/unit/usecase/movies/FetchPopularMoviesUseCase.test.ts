@@ -43,4 +43,35 @@ describe('FetchPopularMovies UseCase', () => {
     expect(savePopularMoviesStub.calledAfter(fetchPopularMoviesStub)).toBe(true)
     expect(handleStub.notCalled).toBe(true)
   })
+
+  test('should handle error correctly', async () => {
+    // Given
+    const movieRepository = MovieRepositoryFactory()
+    const errorService = ErrorServiceFactory()
+    const errorMessage = 'Some error occured.'
+
+    // Prepare
+    const fetchPopularMoviesStub = sinon
+      .stub(movieRepository, 'fetchPopularMovies')
+      .rejects(errorMessage)
+    const savePopularMoviesSpy = sinon.spy(movieRepository, 'savePopularMovies')
+    const handleStub = sinon.stub(errorService, 'handle')
+
+    const props: IFetchPopularMoviesUseCase = {
+      movieRepository: movieRepository,
+      errorService: errorService
+    }
+
+    // Execute
+    const usecase = new UseCase(props)
+    try {
+      await usecase.execute()
+    } catch (e) {} // eslint-disable-line
+
+    // Then
+    expect(fetchPopularMoviesStub.calledOnce).toBe(true)
+    expect(savePopularMoviesSpy.notCalled).toBe(true)
+    expect(handleStub.calledOnce).toBe(true)
+    expect(handleStub.calledImmediatelyAfter(fetchPopularMoviesStub)).toBe(true)
+  })
 })
