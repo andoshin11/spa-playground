@@ -23,8 +23,8 @@ exports[`Storyshots components/Base/Button Default 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
        
       <div
         class="StorybookSection__Label"
@@ -33,8 +33,8 @@ exports[`Storyshots components/Base/Button Default 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
        
       <div
         class="StorybookSection__Label"
@@ -43,8 +43,8 @@ exports[`Storyshots components/Base/Button Default 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
     </div>
   </div>
 </div>
@@ -73,8 +73,8 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
        
       <div
         class="StorybookSection__Label"
@@ -83,8 +83,8 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
        
       <div
         class="StorybookSection__Label"
@@ -93,8 +93,8 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
       </div>
        
       <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
     </div>
   </div>
 </div>
@@ -118,7 +118,7 @@ exports[`Storyshots components/Base/Pager Default 1`] = `
     >
       <div
         class="wrapper"
-        style="width: 1400px;"
+        style="width: 100%;"
       >
         <div
           style="color: rgb(255, 255, 255); margin-bottom: 16px; font-size: 18px; font-weight: bold;"
@@ -127,8 +127,8 @@ exports[`Storyshots components/Base/Pager Default 1`] = `
         </div>
          
         <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
       </div>
     </div>
   </div>
@@ -156,8 +156,8 @@ exports[`Storyshots components/Modules/Movies/Poster Default 1`] = `
         style="width: 320px;"
       >
         <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
       </div>
     </div>
   </div>
@@ -182,11 +182,11 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
     >
       <div
         class="wrapper"
-        style="width: 1400px;"
+        style="width: 100%;"
       >
         <!--function (a, b, c, d) {
-    return createElement(vm, a, b, c, d, true);
-  }-->
+        return createElement(vm, a, b, c, d, true);
+    }-->
       </div>
     </div>
   </div>
