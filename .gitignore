@@ -5,3 +5,4 @@ bundleStats.json
 .env
 *.log
 coverage
+.cache
