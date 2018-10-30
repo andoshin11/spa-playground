@@ -1,8 +1,12 @@
 {
   "env": {
     "test": {
-      "presets": ["env"],
-      "plugins": ["require-context-hook", "transform-es2015-modules-commonjs"]
+      "presets": [
+        "env"
+      ],
+      "plugins": [
+        "require-context-hook"
+      ]
     }
   }
 }
