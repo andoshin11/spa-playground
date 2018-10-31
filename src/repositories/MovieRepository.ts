@@ -61,7 +61,10 @@ export default class MovieRepository {
   getPopularMovies(): MovieEntity[] {
     const ids = this._store.state.movie.popularMovies
     const propsList = ids.map(id => this._store.state.movie.byIds[id])
-    const movies = propsList.map(props => new MovieEntity(props))
+    const genres = this._store.state.movie.genres
+    const movies = propsList.map(
+      props => new MovieEntity(props, props.genre_ids.map(id => genres[id]))
+    )
 
     return movies
   }

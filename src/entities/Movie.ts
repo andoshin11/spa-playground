@@ -24,13 +24,19 @@ export interface IMovieProps {
 
 export default class MovieEntity {
   private _props: IMovieProps
+  private _genreNames: Genre['name'][]
 
-  constructor(props: IMovieProps) {
+  constructor(props: IMovieProps, genreNames: Genre['name'][] = []) {
     this._props = props
+    this._genreNames = genreNames
   }
 
   get props(): IMovieProps {
     return this._props
+  }
+
+  get genreNames(): Genre['name'][] {
+    return this._genreNames
   }
 }
 
