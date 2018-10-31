@@ -4,11 +4,12 @@ import {
   ResetItem,
   StoreMovies,
   ResetMovies,
-  StorePopularMovies
+  StorePopularMovies,
+  StoreGenres
 } from '@/store/modules/movie/types'
 import { APIClient } from '@/infra/network/APIClient'
-import { GetPopularMovies } from '@/infra/network/api/Movie'
-import MovieEntity, { IMovieProps } from '@/entities/Movie'
+import { GetPopularMovies, GetGenres } from '@/infra/network/api/Movie'
+import MovieEntity, { IMovieProps, Genre } from '@/entities/Movie'
 
 export default class MovieRepository {
   private _store: typeof Store
@@ -19,6 +20,10 @@ export default class MovieRepository {
 
   async fetchPopularMovies(): Promise<IMovieProps[]> {
     return await APIClient.shared.request(new GetPopularMovies({}))
+  }
+
+  async fetchGenres(): Promise<Genre[]> {
+    return await APIClient.shared.request(new GetGenres())
   }
 
   saveItem(item: IMovieProps) {
@@ -47,6 +52,10 @@ export default class MovieRepository {
 
     this._store.commit(new StoreMovies(movies))
     this._store.commit(new StorePopularMovies(ids))
+  }
+
+  saveGenres(genres: Genre[]) {
+    this._store.commit(new StoreGenres(genres))
   }
 
   getPopularMovies(): MovieEntity[] {
