@@ -1,5 +1,10 @@
 export type GenreId = number
 
+export interface Genre {
+  id: GenreId
+  name: string
+}
+
 export interface IMovieProps {
   adult: boolean
   backdrop_path: string

@@ -1,4 +1,4 @@
-import { IMovieProps } from '@/entities/Movie'
+import { IMovieProps, Genre } from '@/entities/Movie'
 
 export interface IMovieState {
   item: IMovieProps | null
@@ -6,10 +6,12 @@ export interface IMovieState {
     [id: number]: IMovieProps
   }
   popularMovies: number[]
+  genres: { [id in Genre['id']]: Genre['name'] }
 }
 
 export const initialState = (): IMovieState => ({
   item: null,
   byIds: {},
-  popularMovies: []
+  popularMovies: [],
+  genres: {}
 })

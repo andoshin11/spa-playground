@@ -1,4 +1,4 @@
-import { IMovieProps } from '@/entities/Movie'
+import { IMovieProps, Genre } from '@/entities/Movie'
 
 export enum Types {
   STORE_ITEM = 'movie/store_item',
@@ -6,7 +6,8 @@ export enum Types {
   REMOVE_ITEM = 'movie/remove_item',
   STORE_MOVIES = 'movie/store_movies',
   RESET_MOVIES = 'movie/reset_movies',
-  STORE_POPULAR_MOVIES = 'movie/store_popular_movies'
+  STORE_POPULAR_MOVIES = 'movie/store_popular_movies',
+  STORE_GENRES = 'movie/store_genres'
 }
 
 export class StoreItem implements FluxStandardAction {
@@ -32,4 +33,9 @@ export class ResetMovies implements FluxStandardAction {
 export class StorePopularMovies implements FluxStandardAction {
   type = Types.STORE_POPULAR_MOVIES
   constructor(public payload: number[]) {}
+}
+
+export class StoreGenres implements FluxStandardAction {
+  type = Types.STORE_GENRES
+  constructor(public payload: Genre[]) {}
 }

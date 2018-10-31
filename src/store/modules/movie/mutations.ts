@@ -4,7 +4,8 @@ import {
   Types,
   StoreMovies,
   StorePopularMovies,
-  StoreItem
+  StoreItem,
+  StoreGenres
 } from '@/store/modules/movie/types'
 
 export const mutations: MutationTree<IMovieState> = {
@@ -32,5 +33,14 @@ export const mutations: MutationTree<IMovieState> = {
   [Types.RESET_ITEM]: state => {
     const { item } = initialState()
     state.item = item
+  },
+  [Types.STORE_GENRES]: (state, action: StoreGenres) => {
+    const genres = action.payload
+    genres.forEach(genre => {
+      state.genres = {
+        ...state.genres,
+        [genre.id]: genre.name
+      }
+    })
   }
 }
