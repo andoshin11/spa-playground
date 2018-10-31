@@ -3,33 +3,66 @@
     ref="root" 
     class="Poster" 
     :style="posterStyle"
+    :class="{ 'is-focused': focused }"
   >
     <img 
       :src="posterPath" 
       :alt="movie.props.title" 
       class="Poster__Image"
     >
+    <div class="content">
+      <div class="star">{{ movie.props.vote_average }}</div>
+      <div class="genres">{{ genreNames }}</div>
+      <div class="detailButton">
+        <BaseButton 
+          text="Detail" 
+          :size="ButtonSize.Midium"
+        />
+      </div>
+      <div class="addListButton">
+        <BaseButton 
+          text="My List" 
+          :size="ButtonSize.Midium" 
+          :type="ButtonType.Secondary"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import MovieEntity from '@/entities/Movie'
+import BaseButton, {
+  Size as ButtonSize,
+  Type as ButtonType
+} from '@/components/Base/Button'
 
 interface IData {
   clientWidth: number
+  ButtonSize: typeof ButtonSize
+  ButtonType: typeof ButtonType
 }
 
 export default Vue.extend({
+  components: {
+    BaseButton
+  },
   props: {
     movie: {
       type: Object as () => MovieEntity,
       required: true
+    },
+    focused: {
+      type: Boolean,
+      default: false
     }
   },
   data(): IData {
     return {
-      clientWidth: 0
+      clientWidth: 0,
+      ButtonSize,
+      ButtonType
     }
   },
   computed: {
@@ -38,6 +71,10 @@ export default Vue.extend({
       return {
         height: `${posterHight}px`
       }
+    },
+    genreNames(): string {
+      if (!this.movie) return
+      return this.movie.genreNames.join(', ')
     },
     posterPath(): string {
       return `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${
@@ -56,7 +93,10 @@ export default Vue.extend({
 
 <style scoped>
 .Poster {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .Poster__Image {
@@ -64,5 +104,48 @@ export default Vue.extend({
   max-width: 100%;
   height: 100%;
   max-height: 100%;
+}
+
+.Poster.is-focused .Poster__Image,
+.Poster:focus .Poster__Image,
+.Poster:hover .Poster__Image {
+  filter: blur(10px);
+  transition: all 0.4s ease-out;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.Poster.is-focused .content,
+.Poster:focus .content,
+.Poster:hover .content {
+  opacity: 1;
+}
+
+.star {
+  margin-bottom: var(--space-lv1);
+  color: var(--color-white);
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-h2);
+}
+
+.genres {
+  width: 80%;
+  min-height: 50px;
+  margin-bottom: var(--space-lv2);
+  color: var(--color-white);
+  font-size: var(--fontSize-h3);
+  letter-spacing: 1px;
 }
 </style>
