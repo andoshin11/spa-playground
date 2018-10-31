@@ -12,11 +12,27 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import store from '@/store'
 import HeaderContainer from '@/containers/Header/index.vue'
+
+// Use Case
+import FetchGenresUseCase from '@/usecases/movies/FetchGenresUseCase'
+
+// Repositories
+import MovieRepository from '@/repositories/MovieRepository'
+
+// Service
+import ErrorService from '@/services/ErrorService'
 
 export default Vue.extend({
   components: {
     HeaderContainer
+  },
+  async mounted() {
+    await new FetchGenresUseCase({
+      movieRepository: new MovieRepository(store),
+      errorService: new ErrorService({ context: 'FetchGenresUseCase' })
+    }).execute()
   }
 })
 </script>
