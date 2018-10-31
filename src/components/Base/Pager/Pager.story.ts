@@ -14,7 +14,7 @@ storiesOf('components/Base/Pager', module).add('Default', () => ({
       <div class="StorybookSection">
         <div class="StorybookSection__Header">Pager</div>
         <div class="StorybookSection__Body dark">
-          <div class="wrapper" style="width: 1400px">
+          <div class="wrapper" style="width: 100%">
             <div style="color: #fff;margin-bottom: 16px;font-size: 18px;font-weight: bold;">Current Page: {{ currentPage }}</div>
             <Pager :currentPage="currentPage" :size="1" :total="10" @change="num => currentPage = num" />
           </div>

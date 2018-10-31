@@ -22,7 +22,7 @@ storiesOf('components/Modules/Movies/PosterList', module).add(
     <div class="StorybookSection">
       <div class="StorybookSection__Header">Poster</div>
       <div class="StorybookSection__Body dark">
-        <div class="wrapper" style="width: 1400px">
+        <div class="wrapper" style="width: 100%">
           <PosterList title="Popular Movies" :movies="movies" />
         </div>
       </div>
