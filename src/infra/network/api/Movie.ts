@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios'
 import { APIRequest } from '@/infra/network/APIRequest'
 import { HTTPMethod } from '@/infra/network/APIClient'
-import { IMovieProps } from '@/entities/Movie'
+import { IMovieProps, Genre } from '@/entities/Movie'
 
 export interface IPaginationResponse<T> {
   page: number
@@ -30,5 +30,15 @@ export class GetMovie implements APIRequest<IMovieProps> {
   parse = (data: AxiosResponse) => data.data
   constructor(id: number) {
     this.path = `/api/movie/${id}`
+  }
+}
+
+export class GetGenres implements APIRequest<Genre[]> {
+  response: Genre[] = []
+  path = '/genre/movie/list'
+  method = HTTPMethod.GET
+  parse = (data: AxiosResponse) => {
+    const axiosResponse = data.data as { genres: Genre[] }
+    return axiosResponse.genres
   }
 }

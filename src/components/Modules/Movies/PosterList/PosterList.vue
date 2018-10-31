@@ -18,7 +18,7 @@
       >
         <div 
           class="PosterList__SliderInner" 
-          :style="slideInnterStyle"
+          :style="slideInnerStyle"
         >
           <div 
             v-for="(movie, index) in movies" 
@@ -65,8 +65,8 @@ export default Vue.extend({
     }
   },
   computed: {
-    slideInnterStyle(): any {
-      const left = (this.currentPage - 1) * 20 * -1 + 5
+    slideInnerStyle(): any {
+      const left = (this.currentPage - 1) * 16 * -1 + 5
       return {
         left: `${left}vw`
       }
@@ -123,7 +123,7 @@ export default Vue.extend({
 }
 
 .PosterList__SliderItem {
-  width: 19vw;
+  width: 15vw;
   margin-right: 1vw;
 }
 </style>

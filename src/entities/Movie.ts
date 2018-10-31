@@ -1,5 +1,10 @@
 export type GenreId = number
 
+export interface Genre {
+  id: GenreId
+  name: string
+}
+
 export interface IMovieProps {
   adult: boolean
   backdrop_path: string
@@ -19,14 +24,101 @@ export interface IMovieProps {
 
 export default class MovieEntity {
   private _props: IMovieProps
+  private _genreNames: Genre['name'][]
 
-  constructor(props: IMovieProps) {
+  constructor(props: IMovieProps, genreNames: Genre['name'][] = []) {
     this._props = props
+    this._genreNames = genreNames
   }
 
   get props(): IMovieProps {
     return this._props
   }
+
+  get genreNames(): Genre['name'][] {
+    return this._genreNames
+  }
+}
+
+export const GenresFactory = (): Genre[] => {
+  return [
+    {
+      id: 28,
+      name: 'Action'
+    },
+    {
+      id: 12,
+      name: 'Adventure'
+    },
+    {
+      id: 16,
+      name: 'Animation'
+    },
+    {
+      id: 35,
+      name: 'Comedy'
+    },
+    {
+      id: 80,
+      name: 'Crime'
+    },
+    {
+      id: 99,
+      name: 'Documentary'
+    },
+    {
+      id: 18,
+      name: 'Drama'
+    },
+    {
+      id: 10751,
+      name: 'Family'
+    },
+    {
+      id: 14,
+      name: 'Fantasy'
+    },
+    {
+      id: 36,
+      name: 'History'
+    },
+    {
+      id: 27,
+      name: 'Horror'
+    },
+    {
+      id: 10402,
+      name: 'Music'
+    },
+    {
+      id: 9648,
+      name: 'Mystery'
+    },
+    {
+      id: 10749,
+      name: 'Romance'
+    },
+    {
+      id: 878,
+      name: 'Science Fiction'
+    },
+    {
+      id: 10770,
+      name: 'TV Movie'
+    },
+    {
+      id: 53,
+      name: 'Thriller'
+    },
+    {
+      id: 10752,
+      name: 'War'
+    },
+    {
+      id: 37,
+      name: 'Western'
+    }
+  ]
 }
 
 export const MovieFactory = (): MovieEntity => {
@@ -48,5 +140,10 @@ export const MovieFactory = (): MovieEntity => {
     popularity: 165.054
   }
 
-  return new MovieEntity(dummyProps)
+  return new MovieEntity(dummyProps, [
+    'Action',
+    'Science Fiction',
+    'Comedy',
+    'Adventure'
+  ])
 }

@@ -115,7 +115,7 @@ export default Vue.extend({
   margin-bottom: var(--space-lv2);
   padding: 0 calc(8px * 2);
   font-weight: var(--fontWeight-bold);
-  font-size: var(--fontSize--normal);
+  font-size: 14px;
   letter-spacing: 0.7px;
   border-radius: 28px;
 }
@@ -162,17 +162,17 @@ export default Vue.extend({
 }
 
 .Button.-secondary {
-  color: var(--color-blue);
-  background: var(--color-white);
-  border: 1px solid var(--color-blue);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.102);
 }
 
 .Button.-secondary:hover {
-  background: #e6f5fb;
+  background: var(--color-purple);
+  box-shadow: 0px 4px 13px 0px rgba(15, 16, 18, 0.004);
 }
 
 .Button.-secondary:active {
-  background: #cdecf9;
+  background: var(--color-purple);
 }
 
 .Button.-secondary[disabled] {
