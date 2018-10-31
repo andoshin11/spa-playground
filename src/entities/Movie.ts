@@ -59,5 +59,10 @@ export const MovieFactory = (): MovieEntity => {
     popularity: 165.054
   }
 
-  return new MovieEntity(dummyProps)
+  return new MovieEntity(dummyProps, [
+    'Action',
+    'Science Fiction',
+    'Comedy',
+    'Adventure'
+  ])
 }
