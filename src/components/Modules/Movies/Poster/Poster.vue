@@ -17,6 +17,7 @@
         <BaseButton 
           text="Detail" 
           :size="ButtonSize.Midium"
+          @click="goToDetail"
         />
       </div>
       <div class="addListButton">
@@ -87,6 +88,11 @@ export default Vue.extend({
 
     const clientWidth = this.$refs.root.clientWidth
     this.clientWidth = clientWidth
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push({ name: 'movie', params: { id: this.movie.props.id } })
+    }
   }
 })
 </script>
