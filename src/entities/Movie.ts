@@ -9,6 +9,7 @@ export interface IMovieProps {
   adult: boolean
   backdrop_path: string
   genre_ids: GenreId[]
+  genres?: Genre[]
   id: number
   original_language: string
   original_title: string
@@ -24,19 +25,13 @@ export interface IMovieProps {
 
 export default class MovieEntity {
   private _props: IMovieProps
-  private _genreNames: Genre['name'][]
 
-  constructor(props: IMovieProps, genreNames: Genre['name'][] = []) {
+  constructor(props: IMovieProps) {
     this._props = props
-    this._genreNames = genreNames
   }
 
   get props(): IMovieProps {
     return this._props
-  }
-
-  get genreNames(): Genre['name'][] {
-    return this._genreNames
   }
 }
 
@@ -129,8 +124,7 @@ export const MovieFactory = (): MovieEntity => {
     id: 363088,
     original_language: 'en',
     original_title: 'Ant-Man and the Wasp',
-    overview:
-      'Just when his time under house arrest is about to end, Scott Lang puts again his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.',
+    overview: 'Just when his time under house arrest is about to end, Scott Lang puts again his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.',
     poster_path: '/rv1AWImgx386ULjcf62VYaW8zSt.jpg',
     release_date: '2018-07-04',
     title: 'Ant-Man and the Wasp',
@@ -140,10 +134,5 @@ export const MovieFactory = (): MovieEntity => {
     popularity: 165.054
   }
 
-  return new MovieEntity(dummyProps, [
-    'Action',
-    'Science Fiction',
-    'Comedy',
-    'Adventure'
-  ])
+  return new MovieEntity(dummyProps, ['Action', 'Science Fiction', 'Comedy', 'Adventure'])
 }
