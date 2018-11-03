@@ -6,7 +6,7 @@ export interface IMovieState {
     [id: number]: IMovieProps
   }
   popularMovies: number[]
-  genres: { [id in Genre['id']]: Genre['name'] }
+  genres: { [id in Genre['id']]: Genre }
 }
 
 export const initialState = (): IMovieState => ({
