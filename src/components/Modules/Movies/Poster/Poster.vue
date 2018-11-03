@@ -34,10 +34,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import MovieEntity from '@/entities/Movie'
-import BaseButton, {
-  Size as ButtonSize,
-  Type as ButtonType
-} from '@/components/Base/Button'
+import BaseButton, { Size as ButtonSize, Type as ButtonType } from '@/components/Base/Button'
 
 interface IData {
   clientWidth: number
@@ -75,12 +72,10 @@ export default Vue.extend({
     },
     genreNames(): string {
       if (!this.movie) return
-      return this.movie.genreNames.join(', ')
+      return this.movie.props.genres.map(genre => genre.name).join(', ')
     },
     posterPath(): string {
-      return `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${
-        this.movie.props.poster_path
-      }`
+      return `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${this.movie.props.poster_path}`
     }
   },
   mounted() {
