@@ -1,28 +1,29 @@
 import * as sinon from 'sinon'
 
-import UseCase, {
-  IFetchGenresUseCase
-} from '@/usecases/movies/FetchGenresUseCase'
-import { MovieFactory, GenresFactory } from '@/entities/Movie'
+import UseCase, { IFetchGenresUseCase } from '@/usecases/movies/FetchGenresUseCase'
+import { GenresFactory } from '@/entities/Movie'
 import { MovieRepositoryFactory } from '@/repositories/MovieRepository'
+import { MovieDBGatewayFactory } from '@/gateways/MovieDB'
 import { ErrorServiceFactory } from '@/services/ErrorService'
 
 describe('FetchGenresUseCase UseCase', () => {
   test('should be executed correctly', async () => {
     // Given
+    const movieDBGateway = MovieDBGatewayFactory()
     const movieRepository = MovieRepositoryFactory()
     const errorService = ErrorServiceFactory()
     const genres = GenresFactory()
 
     // Prepare
     const fetchGenresStub = sinon
-      .stub(movieRepository, 'fetchGenres')
+      .stub(movieDBGateway, 'fetchGenres')
       .onFirstCall()
       .resolves(genres)
     const saveGenresStub = sinon.stub(movieRepository, 'saveGenres')
     const handleSpy = sinon.spy(errorService, 'handle')
 
     const props: IFetchGenresUseCase = {
+      movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
     }
@@ -40,18 +41,18 @@ describe('FetchGenresUseCase UseCase', () => {
 
   test('should handle error correctly', async () => {
     // Given
+    const movieDBGateway = MovieDBGatewayFactory()
     const movieRepository = MovieRepositoryFactory()
     const errorService = ErrorServiceFactory()
     const errorMessage = 'Some error occured.'
 
     // Prepare
-    const fetchGenresStub = sinon
-      .stub(movieRepository, 'fetchGenres')
-      .rejects(errorMessage)
+    const fetchGenresStub = sinon.stub(movieDBGateway, 'fetchGenres').rejects(errorMessage)
     const saveGenresSpy = sinon.spy(movieRepository, 'saveGenres')
     const handleStub = sinon.stub(errorService, 'handle')
 
     const props: IFetchGenresUseCase = {
+      movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
     }

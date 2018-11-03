@@ -1,15 +1,15 @@
 import * as sinon from 'sinon'
 
-import UseCase, {
-  IFetchPopularMoviesUseCase
-} from '@/usecases/movies/FetchPopularMoviesUseCase'
+import UseCase, { IFetchPopularMoviesUseCase } from '@/usecases/movies/FetchPopularMoviesUseCase'
 import { MovieFactory } from '@/entities/Movie'
+import { MovieDBGatewayFactory } from '@/gateways/MovieDB'
 import { MovieRepositoryFactory } from '@/repositories/MovieRepository'
 import { ErrorServiceFactory } from '@/services/ErrorService'
 
 describe('FetchPopularMovies UseCase', () => {
   test('should be executed correctly', async () => {
     // Given
+    const movieDBGateway = MovieDBGatewayFactory()
     const movieRepository = MovieRepositoryFactory()
     const errorService = ErrorServiceFactory()
     const movie = MovieFactory()
@@ -19,16 +19,14 @@ describe('FetchPopularMovies UseCase', () => {
 
     // Prepare
     const fetchPopularMoviesStub = sinon
-      .stub(movieRepository, 'fetchPopularMovies')
+      .stub(movieDBGateway, 'fetchPopularMovies')
       .onFirstCall()
       .resolves(movies)
-    const savePopularMoviesStub = sinon.stub(
-      movieRepository,
-      'savePopularMovies'
-    )
+    const savePopularMoviesStub = sinon.stub(movieRepository, 'savePopularMovies')
     const handleStub = sinon.stub(errorService, 'handle')
 
     const props: IFetchPopularMoviesUseCase = {
+      movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
     }
@@ -46,18 +44,18 @@ describe('FetchPopularMovies UseCase', () => {
 
   test('should handle error correctly', async () => {
     // Given
+    const movieDBGateway = MovieDBGatewayFactory()
     const movieRepository = MovieRepositoryFactory()
     const errorService = ErrorServiceFactory()
     const errorMessage = 'Some error occured.'
 
     // Prepare
-    const fetchPopularMoviesStub = sinon
-      .stub(movieRepository, 'fetchPopularMovies')
-      .rejects(errorMessage)
+    const fetchPopularMoviesStub = sinon.stub(movieDBGateway, 'fetchPopularMovies').rejects(errorMessage)
     const savePopularMoviesSpy = sinon.spy(movieRepository, 'savePopularMovies')
     const handleStub = sinon.stub(errorService, 'handle')
 
     const props: IFetchPopularMoviesUseCase = {
+      movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
     }
