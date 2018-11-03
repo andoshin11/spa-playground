@@ -1,14 +1,5 @@
 import Store, { StoreFactory } from '@/store'
-import {
-  StoreItem,
-  ResetItem,
-  StoreMovies,
-  ResetMovies,
-  StorePopularMovies,
-  StoreGenres
-} from '@/store/modules/movie/types'
-import { APIClient } from '@/infra/network/APIClient'
-import { GetPopularMovies, GetGenres } from '@/infra/network/api/Movie'
+import { StoreItem, ResetItem, StoreMovies, ResetMovies, StorePopularMovies, StoreGenres } from '@/store/modules/movie/types'
 import MovieEntity, { IMovieProps, Genre } from '@/entities/Movie'
 
 export default class MovieRepository {
@@ -16,14 +7,6 @@ export default class MovieRepository {
 
   constructor(store: typeof Store) {
     this._store = store
-  }
-
-  async fetchPopularMovies(): Promise<IMovieProps[]> {
-    return await APIClient.shared.request(new GetPopularMovies({}))
-  }
-
-  async fetchGenres(): Promise<Genre[]> {
-    return await APIClient.shared.request(new GetGenres())
   }
 
   saveItem(item: IMovieProps) {
@@ -47,8 +30,16 @@ export default class MovieRepository {
     this._store.commit(new ResetMovies())
   }
 
+  applyGenre(movie: IMovieProps): IMovieProps {
+    const genre_ids = movie.genre_ids
+    const genres = this._store.state.movie.genres
+    movie.genres = genre_ids.map(id => genres[id])
+    return movie
+  }
+
   savePopularMovies(movies: IMovieProps[]) {
     const ids = movies.map(movie => movie.id)
+    movies.forEach(movie => this.applyGenre(movie))
 
     this._store.commit(new StoreMovies(movies))
     this._store.commit(new StorePopularMovies(ids))
@@ -62,9 +53,7 @@ export default class MovieRepository {
     const ids = this._store.state.movie.popularMovies
     const propsList = ids.map(id => this._store.state.movie.byIds[id])
     const genres = this._store.state.movie.genres
-    const movies = propsList.map(
-      props => new MovieEntity(props, props.genre_ids.map(id => genres[id]))
-    )
+    const movies = propsList.map(props => new MovieEntity(props))
 
     return movies
   }
