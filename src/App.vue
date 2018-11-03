@@ -18,6 +18,9 @@ import HeaderContainer from '@/containers/Header/index.vue'
 // Use Case
 import FetchGenresUseCase from '@/usecases/movies/FetchGenresUseCase'
 
+// Gateway
+import MovieDBGateway from '@/gateways/MovieDB'
+
 // Repositories
 import MovieRepository from '@/repositories/MovieRepository'
 
@@ -30,6 +33,7 @@ export default Vue.extend({
   },
   async mounted() {
     await new FetchGenresUseCase({
+      movieDBGateway: new MovieDBGateway(),
       movieRepository: new MovieRepository(store),
       errorService: new ErrorService({ context: 'FetchGenresUseCase' })
     }).execute()

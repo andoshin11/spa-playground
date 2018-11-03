@@ -18,6 +18,9 @@ import Presenter, { IPresenter } from './presenter'
 // Use Case
 import FetchPopularMoviesUseCase from '@/usecases/movies/FetchPopularMoviesUseCase'
 
+// Gateway
+import MovieDBGateway from '@/gateways/MovieDB'
+
 // Repositories
 import MovieRepository from '@/repositories/MovieRepository'
 
@@ -49,6 +52,7 @@ export default Vue.extend({
   methods: {
     async loadContainer() {
       const usecase = new FetchPopularMoviesUseCase({
+        movieDBGateway: new MovieDBGateway(),
         movieRepository: new MovieRepository(store),
         errorService: new ErrorService({ context: 'Fetching popular movies' })
       })
