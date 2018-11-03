@@ -121,6 +121,24 @@ export const MovieFactory = (): MovieEntity => {
     adult: false,
     backdrop_path: '/6P3c80EOm7BodndGBUAJHHsHKrp.jpg',
     genre_ids: [28, 12, 35, 878, 10749, 10751],
+    genres: [
+      {
+        id: 28,
+        name: 'Action'
+      },
+      {
+        id: 12,
+        name: 'Science Fiction'
+      },
+      {
+        id: 35,
+        name: 'Comedy'
+      },
+      {
+        id: 878,
+        name: 'Adventure'
+      }
+    ],
     id: 363088,
     original_language: 'en',
     original_title: 'Ant-Man and the Wasp',
@@ -134,5 +152,5 @@ export const MovieFactory = (): MovieEntity => {
     popularity: 165.054
   }
 
-  return new MovieEntity(dummyProps, ['Action', 'Science Fiction', 'Comedy', 'Adventure'])
+  return new MovieEntity(dummyProps)
 }
