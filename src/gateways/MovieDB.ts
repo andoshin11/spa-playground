@@ -11,3 +11,7 @@ export default class MovieDBGateway {
     return await APIClient.shared.request(new GetGenres())
   }
 }
+
+export const MovieDBGatewayFactory = (): MovieDBGateway => {
+  return new MovieDBGateway()
+}
