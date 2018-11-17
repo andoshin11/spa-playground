@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { withScreenshot } from 'zisui'
 
 import Poster from './Poster.vue'
 import { MovieFactory } from '@/entities/Movie'
@@ -6,6 +7,11 @@ import { MovieFactory } from '@/entities/Movie'
 const dummyMovie = MovieFactory()
 
 storiesOf('components/Modules/Movies/Poster', module)
+  .addDecorator(
+    withScreenshot({
+      delay: 3000
+    })
+  )
   .add('Default', () => ({
     components: { Poster },
     data() {
