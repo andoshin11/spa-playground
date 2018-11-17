@@ -16,14 +16,14 @@
       <div class="detailButton">
         <BaseButton 
           text="Detail" 
-          :size="ButtonSize.Midium"
+          size="midium"
         />
       </div>
       <div class="addListButton">
         <BaseButton 
-          text="My List" 
-          :size="ButtonSize.Midium" 
-          :type="ButtonType.Secondary"
+          text="My List"
+          size="midium"
+          type="secondary"
         />
       </div>
     </div>
@@ -33,15 +33,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import MovieEntity from '@/entities/Movie'
-import BaseButton, {
-  Size as ButtonSize,
-  Type as ButtonType
-} from '@/components/Base/Button'
+import BaseButton from '@/components/Base/Button'
 
 interface IData {
   clientWidth: number
-  ButtonSize: typeof ButtonSize
-  ButtonType: typeof ButtonType
 }
 
 export default Vue.extend({
@@ -60,9 +55,7 @@ export default Vue.extend({
   },
   data(): IData {
     return {
-      clientWidth: 0,
-      ButtonSize,
-      ButtonType
+      clientWidth: 0
     }
   },
   computed: {

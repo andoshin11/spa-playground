@@ -16,18 +16,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
-export enum Type {
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Destructive = 'destructive'
-}
-
-export enum Size {
-  Small = 'small',
-  Midium = 'midium',
-  Large = 'large'
-}
+import { oneOf } from '@/utils/utils'
 
 export default Vue.extend({
   props: {
@@ -41,11 +30,13 @@ export default Vue.extend({
     },
     type: {
       type: String,
-      default: Type.Primary
+      default: 'primary',
+      validator: oneOf(['primary', 'secondary', 'destructive'])
     },
     size: {
       type: String,
-      default: Size.Midium
+      default: 'midium',
+      validator: oneOf(['small', 'midium', 'large'])
     },
     autoWidth: {
       type: Boolean,
