@@ -1,4 +1,4 @@
-import Store, { StoreFactory } from '@/store'
+import Store from '@/store'
 import { StoreMovies, ResetMovies, StorePopularMovies, StoreGenres, StoreCurrentMovie } from '@/store/modules/movie/types'
 import MovieEntity, { IMovieProps, Genre } from '@/entities/Movie'
 
@@ -11,6 +11,10 @@ export default class MovieRepository {
 
   saveMovies(movies: IMovieProps[]) {
     this._store.commit(new StoreMovies(movies))
+  }
+
+  getMovies(): MovieEntity[] {
+    return Object.values(this._store.state.movie.byIds).map(movie => new MovieEntity(movie))
   }
 
   resetMovies() {
@@ -40,6 +44,10 @@ export default class MovieRepository {
     this._store.commit(new StoreGenres(genres))
   }
 
+  getGenres(): Genre[] {
+    return Object.values(this._store.state.movie.genres)
+  }
+
   getPopularMovies(): MovieEntity[] {
     const ids = this._store.state.movie.popularMovies
     const propsList = ids.map(id => this._store.state.movie.byIds[id])
@@ -57,5 +65,5 @@ export default class MovieRepository {
 }
 
 export const MovieRepositoryFactory = (): MovieRepository => {
-  return new MovieRepository(StoreFactory())
+  return new MovieRepository(Store)
 }

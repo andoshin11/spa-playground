@@ -17,7 +17,3 @@ const Store = new Vuex.Store<RootState>({
 })
 
 export default Store
-
-export const StoreFactory = (): typeof Store => {
-  return new Vuex.Store<RootState>({})
-}
