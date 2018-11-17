@@ -1,5 +1,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/andoshin11/spa-playground.svg)](https://greenkeeper.io/)
 [![CircleCI](https://circleci.com/gh/andoshin11/spa-playground/tree/master.svg?style=svg)](https://circleci.com/gh/andoshin11/spa-playground/tree/master)
+[![codecov](https://codecov.io/gh/andoshin11/spa-playground/branch/master/graph/badge.svg)](https://codecov.io/gh/andoshin11/spa-playground)
+![David](https://img.shields.io/david/andoshin11/spa-playground.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/andoshin11/spa-playground.svg)
 
 # About Project
 
