@@ -38,6 +38,14 @@ Unit Test:
 
 - [Sinon.js](https://sinonjs.org/)
 
+Snapshot Test:
+
+- [@storybook/addon-storyshots](https://www.npmjs.com/package/@storybook/addon-storyshots)
+
+Visual Regression Test:
+
+- [reg-suit](https://github.com/reg-viz/reg-suit)
+
 Coverage Report:
 
 - [Codecov](https://codecov.io/)
