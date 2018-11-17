@@ -9,6 +9,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "screenshot": "zisui --serverCmd 'start-storybook -p 9001 --ci -c .storybook -s ./src/assets' http://localhost:9001",
     "snapshot": "jest --config=jest.config.snapshot.js",
     "snapshot:update": "yarn snapshot --updateSnapshot",
     "stats": "webpack --profile --json > bundleStats.json",
@@ -28,6 +29,7 @@
     "test": "npm-run-all test:*",
     "test:unit": "jest --config=jest.config.unit.js",
     "test:snapshot": "yarn snapshot",
+    "reg-suit": "reg-suit run",
     "codecov": "codecov"
   },
   "husky": {
@@ -87,6 +89,10 @@
     "npm-run-all": "^4.1.3",
     "prettier": "^1.14.3",
     "prettier-stylelint": "^0.4.2",
+    "reg-keygen-git-hash-plugin": "^0.7.16",
+    "reg-notify-github-plugin": "^0.7.16",
+    "reg-publish-gcs-plugin": "^0.7.16",
+    "reg-suit": "^0.7.17",
     "sinon": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylelint": "^9.6.0",
@@ -101,7 +107,8 @@
     "webpack": "^4.21.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "zisui": "^1.2.2"
   },
   "dependencies": {
     "axios": "^0.18.0",

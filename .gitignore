@@ -6,3 +6,5 @@ bundleStats.json
 *.log
 coverage
 .cache
+.reg
+__screenshots__
