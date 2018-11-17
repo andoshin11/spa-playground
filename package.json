@@ -27,6 +27,7 @@
     "lintfix:css": "yarn run lint:css --fix",
     "test": "npm-run-all test:*",
     "test:unit": "jest --config=jest.config.unit.js",
+    "test:snapshot": "yarn snapshot",
     "codecov": "codecov"
   },
   "husky": {
