@@ -281,6 +281,142 @@ exports[`Storyshots components/Modules/Movies/Poster Default 1`] = `
             class="Poster__Image"
             src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
           />
+           
+          <div
+            class="content"
+          >
+            <div
+              class="star"
+            >
+              6.9
+            </div>
+             
+            <div
+              class="genres"
+            >
+              Action, Science Fiction, Comedy, Adventure
+            </div>
+             
+            <div
+              class="detailButton"
+            >
+              <button
+                class="Button -primary -midium"
+                type="button"
+              >
+                <div
+                  class="Button__Text"
+                >
+                  Detail
+                </div>
+                 
+                <!---->
+              </button>
+            </div>
+             
+            <div
+              class="addListButton"
+            >
+              <button
+                class="Button -secondary -midium"
+                type="button"
+              >
+                <div
+                  class="Button__Text"
+                >
+                  My List
+                </div>
+                 
+                <!---->
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots components/Modules/Movies/Poster Focused 1`] = `
+<div
+  class="Storybook"
+>
+  <div
+    class="StorybookSection"
+  >
+    <div
+      class="StorybookSection__Header"
+    >
+      Poster
+    </div>
+     
+    <div
+      class="StorybookSection__Body"
+    >
+      <div
+        class="wrapper"
+        style="width: 320px;"
+      >
+        <div
+          class="Poster is-focused"
+          style="height: 0px;"
+        >
+          <img
+            alt="Ant-Man and the Wasp"
+            class="Poster__Image"
+            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+          />
+           
+          <div
+            class="content"
+          >
+            <div
+              class="star"
+            >
+              6.9
+            </div>
+             
+            <div
+              class="genres"
+            >
+              Action, Science Fiction, Comedy, Adventure
+            </div>
+             
+            <div
+              class="detailButton"
+            >
+              <button
+                class="Button -primary -midium"
+                type="button"
+              >
+                <div
+                  class="Button__Text"
+                >
+                  Detail
+                </div>
+                 
+                <!---->
+              </button>
+            </div>
+             
+            <div
+              class="addListButton"
+            >
+              <button
+                class="Button -secondary -midium"
+                type="button"
+              >
+                <div
+                  class="Button__Text"
+                >
+                  My List
+                </div>
+                 
+                <!---->
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -364,6 +500,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -378,6 +564,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -392,6 +628,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -406,6 +692,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -420,6 +756,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -434,6 +820,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -448,6 +884,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -462,6 +948,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -476,6 +1012,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -490,6 +1076,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -504,6 +1140,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -518,6 +1204,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -532,6 +1268,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -546,6 +1332,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -560,6 +1396,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -574,6 +1460,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -588,6 +1524,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -602,6 +1588,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -616,6 +1652,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -630,6 +1716,56 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
                       class="Poster__Image"
                       src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
                     />
+                     
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="star"
+                      >
+                        6.9
+                      </div>
+                       
+                      <div
+                        class="genres"
+                      >
+                        Action, Science Fiction, Comedy, Adventure
+                      </div>
+                       
+                      <div
+                        class="detailButton"
+                      >
+                        <button
+                          class="Button -primary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            Detail
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                       
+                      <div
+                        class="addListButton"
+                      >
+                        <button
+                          class="Button -secondary -midium"
+                          type="button"
+                        >
+                          <div
+                            class="Button__Text"
+                          >
+                            My List
+                          </div>
+                           
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
