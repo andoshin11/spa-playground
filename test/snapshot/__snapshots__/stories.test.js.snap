@@ -22,9 +22,18 @@ exports[`Storyshots components/Base/Button Default 1`] = `
         Large
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -large"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
        
       <div
         class="StorybookSection__Label"
@@ -32,9 +41,18 @@ exports[`Storyshots components/Base/Button Default 1`] = `
         Midium
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -midium"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
        
       <div
         class="StorybookSection__Label"
@@ -42,9 +60,18 @@ exports[`Storyshots components/Base/Button Default 1`] = `
         Small
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -small"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
     </div>
   </div>
 </div>
@@ -72,9 +99,19 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
         Large
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -large"
+        disabled="disabled"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
        
       <div
         class="StorybookSection__Label"
@@ -82,9 +119,19 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
         Midium
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -midium"
+        disabled="disabled"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
        
       <div
         class="StorybookSection__Label"
@@ -92,9 +139,19 @@ exports[`Storyshots components/Base/Button Disabled 1`] = `
         Small
       </div>
        
-      <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+      <button
+        class="Button -primary -small"
+        disabled="disabled"
+        type="button"
+      >
+        <div
+          class="Button__Text"
+        >
+          test
+        </div>
+         
+        <!---->
+      </button>
     </div>
   </div>
 </div>
@@ -123,12 +180,72 @@ exports[`Storyshots components/Base/Pager Default 1`] = `
         <div
           style="color: rgb(255, 255, 255); margin-bottom: 16px; font-size: 18px; font-weight: bold;"
         >
-          Current Page: 1
+          Current Page: 3
         </div>
          
-        <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+        <div
+          class="Pager"
+        >
+          <button
+            class="Pager__ArrowButton"
+          >
+            ←
+          </button>
+           
+          <button
+            class="Pager__ArrowButton"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots components/Base/Pager Last page 1`] = `
+<div
+  class="Storybook"
+>
+  <div
+    class="StorybookSection"
+  >
+    <div
+      class="StorybookSection__Header"
+    >
+      Pager
+    </div>
+     
+    <div
+      class="StorybookSection__Body dark"
+    >
+      <div
+        class="wrapper"
+        style="width: 100%;"
+      >
+        <div
+          style="color: rgb(255, 255, 255); margin-bottom: 16px; font-size: 18px; font-weight: bold;"
+        >
+          Current Page: 10
+        </div>
+         
+        <div
+          class="Pager"
+        >
+          <button
+            class="Pager__ArrowButton"
+          >
+            ←
+          </button>
+           
+          <button
+            class="Pager__ArrowButton"
+            disabled="disabled"
+          >
+            →
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -155,9 +272,16 @@ exports[`Storyshots components/Modules/Movies/Poster Default 1`] = `
         class="wrapper"
         style="width: 320px;"
       >
-        <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+        <div
+          class="Poster"
+          style="height: 0px;"
+        >
+          <img
+            alt="Ant-Man and the Wasp"
+            class="Poster__Image"
+            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -184,9 +308,334 @@ exports[`Storyshots components/Modules/Movies/PosterList Default 1`] = `
         class="wrapper"
         style="width: 100%;"
       >
-        <!--function (a, b, c, d) {
-        return createElement(vm, a, b, c, d, true);
-    }-->
+        <div
+          class="PosterList"
+        >
+          <div
+            class="PosterList__Header"
+          >
+            <div
+              class="PosterList__Title"
+            >
+              Popular Movies
+            </div>
+             
+            <div
+              class="PosterList__Nav"
+            >
+              <div
+                class="Pager"
+              >
+                <button
+                  class="Pager__ArrowButton"
+                  disabled="disabled"
+                >
+                  ←
+                </button>
+                 
+                <button
+                  class="Pager__ArrowButton"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+           
+          <div
+            class="PosterList__Body"
+          >
+            <div
+              class="PosterList__Slider"
+            >
+              <div
+                class="PosterList__SliderInner"
+                style="left: 5vw;"
+              >
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="PosterList__SliderItem"
+                >
+                  <div
+                    class="Poster"
+                    style="height: 0px;"
+                  >
+                    <img
+                      alt="Ant-Man and the Wasp"
+                      class="Poster__Image"
+                      src="https://image.tmdb.org/t/p/w600_and_h900_bestv2//rv1AWImgx386ULjcf62VYaW8zSt.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
