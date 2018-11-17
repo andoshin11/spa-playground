@@ -143,8 +143,8 @@ export const GenresFactory = (): Genre[] => {
   ]
 }
 
-export const MovieFactory = (): MovieEntity => {
-  const dummyProps: IMovieProps = {
+export const MoviePropsFactory = (): IMovieProps => {
+  return {
     adult: false,
     backdrop_path: '/6P3c80EOm7BodndGBUAJHHsHKrp.jpg',
     belongs_to_collection: {
@@ -210,6 +210,8 @@ export const MovieFactory = (): MovieEntity => {
     vote_average: 6.9,
     vote_count: 2811
   }
+}
 
-  return new MovieEntity(dummyProps)
+export const MovieFactory = (): MovieEntity => {
+  return new MovieEntity(this.MoviePropsFactory())
 }
