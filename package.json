@@ -9,6 +9,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "screenshot": "zisui --serverCmd 'start-storybook -p 9001 --ci -c .storybook -s ./src/assets' http://localhost:9001",
     "snapshot": "jest --config=jest.config.snapshot.js",
     "snapshot:update": "yarn snapshot --updateSnapshot",
     "stats": "webpack --profile --json > bundleStats.json",
