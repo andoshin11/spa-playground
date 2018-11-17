@@ -7,7 +7,7 @@ storiesOf('components/Base/Pager', module)
     components: { Pager },
     data() {
       return {
-        currentPage: 2
+        currentPage: 6
       }
     },
     template: `

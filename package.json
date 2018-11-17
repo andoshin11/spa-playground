@@ -29,7 +29,7 @@
     "test": "npm-run-all test:*",
     "test:unit": "jest --config=jest.config.unit.js",
     "test:snapshot": "yarn snapshot",
-    "reg-suit": "reg-suit run",
+    "reg-suit": "reg-suit run --update",
     "codecov": "codecov"
   },
   "husky": {
