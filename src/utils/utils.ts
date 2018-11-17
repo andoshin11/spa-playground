@@ -19,7 +19,7 @@ export const range = (min: number, max: number): number[] => {
 }
 
 export const oneOf = (keys: string[]): PropOptions['validator'] => {
-  return value => {
+  return (value: string) => {
     return keys.indexOf(value) !== -1
   }
 }

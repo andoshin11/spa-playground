@@ -27,3 +27,20 @@ describe('range', () => {
     )
   })
 })
+
+describe('oneOf', () => {
+  const validator = (keys: string[], value: string): boolean =>
+    utils.oneOf(keys)(value)
+
+  test('should return true', () => {
+    expect(validator(['fuga'], 'fuga')).toBe(true)
+    expect(validator(['fuga', 'hoge'], 'hoge')).toBe(true)
+    expect(validator(['fuga', 'hoge', 'piyo'], 'hoge')).toBe(true)
+  })
+
+  test('should return false', () => {
+    expect(validator(['fuga'], 'hoge')).toBe(false)
+    expect(validator(['fuga', 'hoge'], 'piyo')).toBe(false)
+    expect(validator(['fuga', 'hoge', 'piyo'], 'poyo')).toBe(false)
+  })
+})
