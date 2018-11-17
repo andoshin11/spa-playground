@@ -10,6 +10,9 @@
     },
     "reg-publish-gcs-plugin": {
       "bucketName": "reg-publish-bucket-6a28949c-4f71-4f13-af55-eff1bdd71fc5"
+    },
+    "reg-keygen-git-hash-plugin": {
+      "expectedType": "base-commit"
     }
   }
 }
