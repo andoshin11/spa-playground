@@ -29,7 +29,7 @@ export class GetMovie implements APIRequest<IMovieProps> {
   method = HTTPMethod.GET
   parse = (data: AxiosResponse) => data.data
   constructor(id: number) {
-    this.path = `/api/movie/${id}`
+    this.path = `/movie/${id}`
   }
 }
 

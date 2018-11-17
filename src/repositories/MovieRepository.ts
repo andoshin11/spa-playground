@@ -48,6 +48,12 @@ export default class MovieRepository {
 
     return movies
   }
+
+  getCurrentMovie(): MovieEntity | null {
+    const id = this._store.state.movie.currentMovie
+    const currentMovie = id ? this._store.state.movie.byIds[id] : null
+    return currentMovie ? new MovieEntity(currentMovie) : null
+  }
 }
 
 export const MovieRepositoryFactory = (): MovieRepository => {

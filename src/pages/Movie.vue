@@ -1,10 +1,16 @@
 <template>
   <div class="Movie">
-    test page
+    <MovieContainer :id="$route.params.id" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+import MovieContainer from '@/containers/Movie/index.vue'
+
+export default Vue.extend({
+  components: {
+    MovieContainer
+  }
+})
 </script>

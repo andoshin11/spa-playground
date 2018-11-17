@@ -1,10 +1,16 @@
-// export interface IPresenterParams {
-// }
+import MovieEntity from '@/entities/Movie'
+import MovieRepository from '@/repositories/MovieRepository'
 
-// export interface IPresenter {
-// }
+export interface IPresenterParams {
+  movieRepository: MovieRepository
+}
 
-// export default ({}: IPresenterParams): IPresenter => {
-//   return {
-//   }
-// }
+export interface IPresenter {
+  movie: MovieEntity | null
+}
+
+export default ({ movieRepository }: IPresenterParams): IPresenter => {
+  return {
+    movie: movieRepository.getCurrentMovie()
+  }
+}
