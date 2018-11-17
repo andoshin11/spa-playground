@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   docker:
     - image: node:10.12
-    working_directory: /repo
+  working_directory: /repo
 
 jobs:
   test:
@@ -12,8 +12,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
       - run:
           name: Install dependencies
           command: yarn install --pure-lockfile
@@ -39,7 +39,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
+      - ? attach_workspace
         at: /repo
       - run:
           name: Screenshot
