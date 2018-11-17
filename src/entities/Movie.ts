@@ -213,5 +213,5 @@ export const MoviePropsFactory = (): IMovieProps => {
 }
 
 export const MovieFactory = (): MovieEntity => {
-  return new MovieEntity(this.MoviePropsFactory())
+  return new MovieEntity(MoviePropsFactory())
 }
