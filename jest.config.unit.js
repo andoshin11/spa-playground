@@ -10,7 +10,7 @@ module.exports = {
     '[^/]vue$': 'vue/dist/vue.esm.js'
   },
   collectCoverage: true,
-  collectCoverageFrom: ['src/usecases/**/*.ts'],
+  collectCoverageFrom: ['src/usecases/**/*.ts', 'src/utils/*.ts'],
   coverageDirectory: './coverage/',
   verbose: true,
   testMatch: ['<rootDir>/test/unit/**/*.ts'],

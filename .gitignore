@@ -5,3 +5,6 @@ bundleStats.json
 .env
 *.log
 coverage
+.cache
+.reg
+__screenshots__
