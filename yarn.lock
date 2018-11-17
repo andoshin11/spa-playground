@@ -9768,14 +9768,6 @@ reg-notify-github-plugin@^0.7.16:
     request-promise "^4.2.1"
     tiny-commit-walker "^1.1.2"
 
-reg-notify-slack-plugin@^0.7.16:
-  version "0.7.16"
-  resolved "https://registry.yarnpkg.com/reg-notify-slack-plugin/-/reg-notify-slack-plugin-0.7.16.tgz#a2a3586301d28a927c03341ef528ce470d8bf257"
-  integrity sha512-NJosiypHgYPGgZN1q1wLCjPjyMJhlGVioj19CEIGljOzrxWBOmr/gdzfidHmR6cpTQ9EhJ++AbN0i8L34stRlA==
-  dependencies:
-    request "^2.81.0"
-    request-promise "^4.2.1"
-
 reg-publish-gcs-plugin@^0.7.16:
   version "0.7.16"
   resolved "https://registry.yarnpkg.com/reg-publish-gcs-plugin/-/reg-publish-gcs-plugin-0.7.16.tgz#73a0de1bf293aca71b713d8ba93e6f46e42b5aff"
