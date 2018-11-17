@@ -11,7 +11,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import store from '@/store'
 
 import Presenter, { IPresenter } from './presenter'
 
@@ -42,7 +41,7 @@ export default Vue.extend({
   computed: {
     presenter(): IPresenter {
       return Presenter({
-        movieRepository: new MovieRepository(store)
+        movieRepository: new MovieRepository(this.$store)
       })
     }
   },
@@ -53,7 +52,7 @@ export default Vue.extend({
     async loadContainer() {
       const usecase = new FetchPopularMoviesUseCase({
         movieDBGateway: new MovieDBGateway(),
-        movieRepository: new MovieRepository(store),
+        movieRepository: new MovieRepository(this.$store),
         errorService: new ErrorService({ context: 'Fetching popular movies' })
       })
 
