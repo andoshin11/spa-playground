@@ -29,6 +29,7 @@
     "test": "npm-run-all test:*",
     "test:unit": "jest --config=jest.config.unit.js",
     "test:snapshot": "yarn snapshot",
+    "reg-suit": "reg-suit run",
     "codecov": "codecov"
   },
   "husky": {
@@ -92,6 +93,7 @@
     "reg-notify-github-plugin": "^0.7.16",
     "reg-notify-slack-plugin": "^0.7.16",
     "reg-publish-gcs-plugin": "^0.7.16",
+    "reg-suit": "^0.7.17",
     "sinon": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylelint": "^9.6.0",

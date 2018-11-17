@@ -1,34 +1,58 @@
 version: 2
+
+defaults: &defaults
+  docker:
+    - image: node:10.12
+    working_directory: /repo
+
 jobs:
-  build:
-    docker:
-      - image: node:10.12
-    working_directory: ~/repo
+  test:
+    <<: *defaults
     steps:
       - checkout
-
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "yarn.lock" }}
           - v1-dependencies-
-
       - run:
           name: Install dependencies
           command: yarn install --pure-lockfile
-
       - run:
           name: Lint
           command: yarn run lint
-
       - run:
           name: Test
           command: yarn run test
-
       - run:
           name: Codecov
           command: yarn run codecov
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: /repo
+          paths:
+            - ./node_modules
+
+  regression:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+        at: /repo
+      - run:
+          name: Screenshot
+          command: yarn run screenshot
+      - run:
+          name: reg-suit
+          command: yarn run reg-suit
+
+workflows:
+  version: 2
+  test-workflow:
+    jobs:
+      - test
+      - regression:
+          requires:
+            - test
