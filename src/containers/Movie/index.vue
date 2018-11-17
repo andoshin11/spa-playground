@@ -1,11 +1,6 @@
 <template>
-  <div class="Home">
-    <div class="Home__Popular">
-      <PosterList 
-        title="Popular Movies" 
-        :movies="presenter.popularMovies"
-      />
-    </div>
+  <div class="Movie">
+    {{ presenter.movie.props }}
   </div>
 </template>
 
@@ -15,7 +10,7 @@ import Vue from 'vue'
 import Presenter, { IPresenter } from './presenter'
 
 // Use Case
-import FetchPopularMoviesUseCase from '@/usecases/movies/FetchPopularMoviesUseCase'
+import FetchMovieUseCase from '@/usecases/movies/FetchMovieUseCase'
 
 // Gateway
 import MovieDBGateway from '@/gateways/MovieDB'
@@ -27,13 +22,15 @@ import MovieRepository from '@/repositories/MovieRepository'
 import ErrorService from '@/services/ErrorService'
 
 // components
-import PosterList from '@/components/Modules/Movies/PosterList'
 
 interface IData {}
 
 export default Vue.extend({
-  components: {
-    PosterList
+  props: {
+    id: {
+      type: String,
+      required: true
+    }
   },
   data(): IData {
     return {}
@@ -46,25 +43,19 @@ export default Vue.extend({
     }
   },
   async mounted() {
-    await this.loadContainer()
+    await this.fetchMovie()
   },
   methods: {
-    async loadContainer() {
-      const usecase = new FetchPopularMoviesUseCase({
-        movieDBGateway: new MovieDBGateway(),
+    async fetchMovie() {
+      const id = parseInt(this.id, 10)
+      const usecase = new FetchMovieUseCase({
+        errorService: new ErrorService({ context: 'Fetching movie.' }),
         movieRepository: new MovieRepository(this.$store),
-        errorService: new ErrorService({ context: 'Fetching popular movies' })
+        movieDBGateway: new MovieDBGateway()
       })
 
-      await usecase.execute()
+      await usecase.execute(id)
     }
   }
 })
 </script>
-
-<style scoped>
-.Home {
-  min-height: 100vh;
-  background: var(--color-black);
-}
-</style>

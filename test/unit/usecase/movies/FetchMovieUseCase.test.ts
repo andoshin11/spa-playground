@@ -1,28 +1,28 @@
 import * as sinon from 'sinon'
 
-import UseCase, { IFetchGenresUseCase } from '@/usecases/movies/FetchGenresUseCase'
-import { GenresFactory } from '@/entities/Movie'
+import UseCase, { IFetchMovieUseCase } from '@/usecases/movies/FetchMovieUseCase'
+import { MoviePropsFactory } from '@/entities/Movie'
 import { MovieRepositoryFactory } from '@/repositories/MovieRepository'
 import { MovieDBGatewayFactory } from '@/gateways/MovieDB'
 import { ErrorServiceFactory } from '@/services/ErrorService'
 
-describe('FetchGenresUseCase UseCase', () => {
+describe('FetchMovie UseCase', () => {
   test('should be executed correctly', async () => {
     // Given
     const movieDBGateway = MovieDBGatewayFactory()
     const movieRepository = MovieRepositoryFactory()
     const errorService = ErrorServiceFactory()
-    const genres = GenresFactory()
+    const movieProps = MoviePropsFactory()
 
     // Prepare
-    const fetchGenresStub = sinon
-      .stub(movieDBGateway, 'fetchGenres')
+    const fetchMovieStub = sinon
+      .stub(movieDBGateway, 'fetchMovie')
       .onFirstCall()
-      .resolves(genres)
-    const saveGenresStub = sinon.stub(movieRepository, 'saveGenres')
+      .resolves(movieProps)
+    const saveCurrentMovieStub = sinon.stub(movieRepository, 'saveCurrentMovie')
     const handleSpy = sinon.spy(errorService, 'handle')
 
-    const props: IFetchGenresUseCase = {
+    const props: IFetchMovieUseCase = {
       movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
@@ -30,12 +30,12 @@ describe('FetchGenresUseCase UseCase', () => {
 
     // Execute
     const usecase = new UseCase(props)
-    await usecase.execute()
+    await usecase.execute(1)
 
     // Then
-    expect(fetchGenresStub.calledOnce).toBe(true)
-    expect(saveGenresStub.withArgs(genres).calledOnce).toBe(true)
-    expect(saveGenresStub.calledImmediatelyAfter(fetchGenresStub)).toBe(true)
+    expect(fetchMovieStub.withArgs(1).calledOnce).toBe(true)
+    expect(saveCurrentMovieStub.withArgs(movieProps).calledOnce).toBe(true)
+    expect(saveCurrentMovieStub.calledImmediatelyAfter(fetchMovieStub)).toBe(true)
     expect(handleSpy.notCalled).toBe(true)
   })
 
@@ -47,11 +47,11 @@ describe('FetchGenresUseCase UseCase', () => {
     const errorMessage = 'Some error occured.'
 
     // Prepare
-    const fetchGenresStub = sinon.stub(movieDBGateway, 'fetchGenres').rejects(errorMessage)
-    const saveGenresSpy = sinon.spy(movieRepository, 'saveGenres')
+    const fetchMovieStub = sinon.stub(movieDBGateway, 'fetchMovie').rejects(errorMessage)
+    const saveCurrentMovieStub = sinon.spy(movieRepository, 'saveCurrentMovie')
     const handleStub = sinon.stub(errorService, 'handle')
 
-    const props: IFetchGenresUseCase = {
+    const props: IFetchMovieUseCase = {
       movieDBGateway: movieDBGateway,
       movieRepository: movieRepository,
       errorService: errorService
@@ -60,13 +60,13 @@ describe('FetchGenresUseCase UseCase', () => {
     // Execute
     const usecase = new UseCase(props)
     try {
-      await usecase.execute()
+      await usecase.execute(1)
     } catch (e) {} // eslint-disable-line
 
     // Then
-    expect(fetchGenresStub.calledOnce).toBe(true)
-    expect(saveGenresSpy.notCalled).toBe(true)
+    expect(fetchMovieStub.withArgs(1).calledOnce).toBe(true)
+    expect(saveCurrentMovieStub.notCalled).toBe(true)
     expect(handleStub.calledOnce).toBe(true)
-    expect(handleStub.calledImmediatelyAfter(fetchGenresStub)).toBe(true)
+    expect(handleStub.calledImmediatelyAfter(fetchMovieStub)).toBe(true)
   })
 })

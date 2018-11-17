@@ -8,10 +8,7 @@ const extractHTML = (template, templatePath) => {
   let resultHTML = ''
 
   if (template.content === '' && template.src !== '') {
-    template.content = fs.readFileSync(
-      path.resolve(path.dirname(templatePath), template.src),
-      'utf8'
-    )
+    template.content = fs.readFileSync(path.resolve(path.dirname(templatePath), template.src), 'utf8')
   }
 
   if (!template.lang || template.lang === 'resultHTML') {
@@ -30,19 +27,14 @@ const extractScriptContent = (script, scriptPath) => {
     throw 'No script available to transform'
   }
   if (script.content === '' && script.src !== '') {
-    script.content = fs.readFileSync(
-      path.resolve(path.dirname(scriptPath), script.src),
-      'utf8'
-    )
+    script.content = fs.readFileSync(path.resolve(path.dirname(scriptPath), script.src), 'utf8')
   }
   return script.content
 }
 
-const stringifyRender = render =>
-  vueNextCompiler('function render () {' + render + '}')
+const stringifyRender = render => vueNextCompiler('function render () {' + render + '}')
 
-const stringifyStaticRender = staticRenderFns =>
-  `[${staticRenderFns.map(stringifyRender).join(',')}]`
+const stringifyStaticRender = staticRenderFns => `[${staticRenderFns.map(stringifyRender).join(',')}]`
 
 module.exports = {
   process(src, filePath) {
@@ -66,11 +58,6 @@ module.exports = {
     scriptContent = extractScriptContent(script, filePath)
 
     const transformKey = 'babel' // here is the changed line. We always use babel.
-    return transforms[transformKey](
-      scriptContent,
-      filePath,
-      render,
-      staticRenderFns
-    )
+    return transforms[transformKey](scriptContent, filePath, render, staticRenderFns)
   }
 }

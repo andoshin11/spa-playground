@@ -6,9 +6,7 @@ export const range = (min: number, max: number): number[] => {
   }
 
   if (min == max) {
-    throw new Error(
-      'Both of the given arguments must not be identical to each other.'
-    )
+    throw new Error('Both of the given arguments must not be identical to each other.')
   }
 
   const nums: number[] = []

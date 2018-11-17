@@ -12,9 +12,7 @@ describe('range', () => {
       utils.range(5, 3)
     }
 
-    expect(wrapper).toThrowError(
-      /^The first argument must be smaller than the second arg.$/
-    )
+    expect(wrapper).toThrowError(/^The first argument must be smaller than the second arg.$/)
   })
 
   test('should throw equality error', () => {
@@ -22,15 +20,12 @@ describe('range', () => {
       utils.range(3, 3)
     }
 
-    expect(wrapper).toThrowError(
-      /^Both of the given arguments must not be identical to each other.$/
-    )
+    expect(wrapper).toThrowError(/^Both of the given arguments must not be identical to each other.$/)
   })
 })
 
 describe('oneOf', () => {
-  const validator = (keys: string[], value: string): boolean =>
-    utils.oneOf(keys)(value)
+  const validator = (keys: string[], value: string): boolean => utils.oneOf(keys)(value)
 
   test('should return true', () => {
     expect(validator(['fuga'], 'fuga')).toBe(true)

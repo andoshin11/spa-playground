@@ -17,6 +17,7 @@
         <BaseButton 
           text="Detail" 
           size="midium"
+          @click="goToDetail"
         />
       </div>
       <div class="addListButton">
@@ -67,12 +68,10 @@ export default Vue.extend({
     },
     genreNames(): string {
       if (!this.movie) return
-      return this.movie.genreNames.join(', ')
+      return this.movie.props.genres.map(genre => genre.name).join(', ')
     },
     posterPath(): string {
-      return `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${
-        this.movie.props.poster_path
-      }`
+      return `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${this.movie.props.poster_path}`
     }
   },
   mounted() {
@@ -80,6 +79,11 @@ export default Vue.extend({
 
     const clientWidth = this.$refs.root.clientWidth
     this.clientWidth = clientWidth
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push({ name: 'movie', params: { id: this.movie.props.id } })
+    }
   }
 })
 </script>
