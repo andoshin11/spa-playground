@@ -95,7 +95,7 @@
     "reg-suit": "^0.7.17",
     "sinon": "^7.1.0",
     "style-loader": "^0.23.1",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.9.0",
     "stylelint-config-rational-order": "^0.0.2",
     "stylelint-config-recommended": "^2.1.0",
     "ts-jest": "^23.10.4",
