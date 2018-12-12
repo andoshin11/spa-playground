@@ -61,7 +61,7 @@
     "@babel/preset-env": "^7.1.6",
     "@storybook/addon-a11y": "4.0.0",
     "@storybook/addon-storyshots": "4.1.0",
-    "@storybook/vue": "4.0.0",
+    "@storybook/vue": "4.1.0",
     "@types/jest": "^23.3.8",
     "@types/node": "^10.12.0",
     "@types/sinon": "^5.0.5",
