@@ -58,7 +58,7 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-typescript": "^7.2.0",
-    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-env": "^7.2.3",
     "@storybook/addon-a11y": "4.0.0",
     "@storybook/addon-storyshots": "4.0.0",
     "@storybook/vue": "4.0.0",
