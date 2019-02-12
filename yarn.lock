@@ -1219,10 +1219,10 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/jest@^23.3.8":
-  version "23.3.8"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.8.tgz#56b07c0c3d7c8a6c47abb4f785cab648c6eafd01"
-  integrity sha512-OKDxB/7woaQfUKkj+7+Zo3PmAxAYAy+SNwOwFhnYAc8JTaPhGOv8SC6QQg5D9+Giprhx/DzoKbJIpV9799VV0g==
+"@types/jest@^24.0.0":
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.0.tgz#848492026c327b3548d92be0352a545c36a21e8a"
+  integrity sha512-kOafJnUTnMd7/OfEO/x3I47EHswNjn+dbz9qk3mtonr1RvKT+1FGVxnxAx08I9K8Tl7j9hpoJRE7OCf+t10fng==
 
 "@types/jquery@*":
   version "3.3.22"
@@ -1243,7 +1243,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^10.11.7", "@types/node@^10.12.0":
+"@types/node@*", "@types/node@^10.11.7":
   version "10.12.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
   integrity sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
@@ -1252,6 +1252,11 @@
   version "10.12.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.9.tgz#a07bfa74331471e1dc22a47eb72026843f7b95c8"
   integrity sha512-eajkMXG812/w3w4a1OcBlaTwsFPO5F7fJ/amy+tieQxEMWBlbV1JGSjkFM+zkHNf81Cad+dfIRA+IBkvmvdAeA==
+
+"@types/node@^11.9.0":
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.0.tgz#35fea17653490dab82e1d5e69731abfdbf13160d"
+  integrity sha512-ry4DOrC+xenhQbzk1iIPzCZGhhPGEFv7ia7Iu6XXSLVluiJIe9FfG7Iu3mObH9mpxEXCWLCMU4JWbCCR9Oy1Zg==
 
 "@types/prop-types@*":
   version "15.5.6"
