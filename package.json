@@ -104,7 +104,7 @@
     "typescript-eslint-parser": "^20.0.0",
     "vue-loader": "^15.4.2",
     "vue-template-es2015-compiler": "^1.6.0",
-    "webpack": "^4.21.0",
+    "webpack": "^4.29.4",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
