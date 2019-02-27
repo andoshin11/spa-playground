@@ -93,7 +93,7 @@
     "reg-notify-github-plugin": "^0.7.16",
     "reg-publish-gcs-plugin": "^0.7.16",
     "reg-suit": "^0.7.17",
-    "sinon": "^7.1.0",
+    "sinon": "^7.2.5",
     "style-loader": "^0.23.1",
     "stylelint": "^9.6.0",
     "stylelint-config-rational-order": "^0.0.2",
