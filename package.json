@@ -90,7 +90,7 @@
     "prettier": "^1.14.3",
     "prettier-stylelint": "^0.4.2",
     "reg-keygen-git-hash-plugin": "^0.7.16",
-    "reg-notify-github-plugin": "^0.7.16",
+    "reg-notify-github-plugin": "^0.7.21",
     "reg-publish-gcs-plugin": "^0.7.16",
     "reg-suit": "^0.7.17",
     "sinon": "^7.1.0",
