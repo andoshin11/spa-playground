@@ -1219,10 +1219,17 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/jest@^23.3.8":
-  version "23.3.8"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.8.tgz#56b07c0c3d7c8a6c47abb4f785cab648c6eafd01"
-  integrity sha512-OKDxB/7woaQfUKkj+7+Zo3PmAxAYAy+SNwOwFhnYAc8JTaPhGOv8SC6QQg5D9+Giprhx/DzoKbJIpV9799VV0g==
+"@types/jest-diff@*":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
+  integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
+
+"@types/jest@^24.0.0":
+  version "24.0.9"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.9.tgz#74ce9cf337f25e189aa18f76ab3d65e8669b55f2"
+  integrity sha512-k3OOeevcBYLR5pdsOv5g3OP94h3mrJmLPHFEPWgbbVy2tGv0TZ/TlygiC848ogXhK8NL0I5up7YYtwpCp8xCJA==
+  dependencies:
+    "@types/jest-diff" "*"
 
 "@types/jquery@*":
   version "3.3.22"
@@ -8413,11 +8420,6 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-open@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
-  integrity sha1-QsPhjslUZra/DcQvOilFw/DK2Pw=
-
 opener@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/opener/-/opener-1.5.1.tgz#6d2f0e77f1a0af0032aca716c2c1fbb8e7e8abed"
@@ -9719,12 +9721,12 @@ reg-keygen-git-hash-plugin@^0.7.16:
   dependencies:
     reg-suit-util "^0.7.16"
 
-reg-notify-github-plugin@^0.7.16:
-  version "0.7.16"
-  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.7.16.tgz#48dd2e1633f4d91a4b6b00659413cfaaf9369049"
-  integrity sha512-aF2BnGTPXVxLQOvUmj+YLLg+Hqg2mG5VCIbxD7MQ4N8dwyMqinJvgPFY283MST5do8SGuKM0ITp166ZeWTu6QQ==
+reg-notify-github-plugin@^0.7.21:
+  version "0.7.21"
+  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.7.21.tgz#ee398c782299f23a2cc9d908be9724b15fdacd00"
+  integrity sha512-p+e1dXbFc3yzXc006AfG1TQGwGSc3K5h3S46DMCwiaSb/gCHQ5a4y8uHjXK5vqpvh9gxPa+4XT/VbCRWIPbDaA==
   dependencies:
-    open "^0.0.5"
+    opn "^5.4.0"
     reg-suit-util "^0.7.16"
     request "^2.81.0"
     request-promise "^4.2.1"
